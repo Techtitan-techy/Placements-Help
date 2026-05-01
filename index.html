@@ -177,6 +177,44 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .footer-heart{color:#ef4444;display:inline-block;animation:heartbeat 1.5s infinite}
 @keyframes heartbeat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
 @media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}.plan-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* NAV SCROLL CONTROL */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.nav-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 0;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
+.nav-ctrl {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+  user-select: none;
+  z-index: 5;
+}
+.nav-ctrl:hover { color: var(--accent); border-color: var(--accent); background: var(--surface); }
 </style>
 <!-- Vercel Web Analytics -->
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
@@ -187,16 +225,22 @@ tr:hover td{background:rgba(255,255,255,.02)}
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brand">PLACEMENT 2026</div>
-    <button class="nav-btn active" onclick="show(0)">Overview</button>
-    <button class="nav-btn" onclick="show(1)">A–Z Concepts</button>
-    <button class="nav-btn" onclick="show(2)">Roadmap</button>
-    <button class="nav-btn" onclick="show(3)">DSA Topics</button>
-    <button class="nav-btn" onclick="show(4)">CS Fundamentals</button>
-    <button class="nav-btn" onclick="show(5)">Aptitude</button>
-    <button class="nav-btn" onclick="show(6)">Projects & Resume</button>
-    <button class="nav-btn" onclick="show(7)">Company-Specific</button>
-    <button class="nav-btn" onclick="show(8)">Study Plans</button>
-    <button class="nav-btn" onclick="show(9)">Final Checklist</button>
+    <div class="nav-container">
+      <div class="nav-ctrl" onclick="scrollNav(-1)">‹</div>
+      <div class="nav-scroll" id="navScroll">
+        <button class="nav-btn active" onclick="show(0)">Overview</button>
+        <button class="nav-btn" onclick="show(1)">A–Z Concepts</button>
+        <button class="nav-btn" onclick="show(2)">Roadmap</button>
+        <button class="nav-btn" onclick="show(3)">DSA Topics</button>
+        <button class="nav-btn" onclick="show(4)">CS Fundamentals</button>
+        <button class="nav-btn" onclick="show(5)">Aptitude</button>
+        <button class="nav-btn" onclick="show(6)">Projects & Resume</button>
+        <button class="nav-btn" onclick="show(7)">Company-Specific</button>
+        <button class="nav-btn" onclick="show(8)">Study Plans</button>
+        <button class="nav-btn" onclick="show(9)">Final Checklist</button>
+      </div>
+      <div class="nav-ctrl" onclick="scrollNav(1)">›</div>
+    </div>
   </div>
 </div>
 
@@ -1628,6 +1672,10 @@ function filterAZ(){const q=document.getElementById('az-search').value.toLowerCa
 function filterPriority(p){pFilter=p;document.querySelectorAll('#filter-all,#filter-high,#filter-med,#filter-low').forEach(b=>b.classList.remove('active'));document.getElementById('filter-'+p).classList.add('active');filterAZ()}
 
 function showPlan(id){document.querySelectorAll('.plan-section').forEach(d=>d.style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('#s8 .nav-btn').forEach(b=>{b.classList.toggle('active',b.getAttribute('onclick').includes(id))})}
+
+function scrollNav(dir) {
+  document.getElementById('navScroll').scrollBy({ left: dir * 200, behavior: 'smooth' });
+}
 
 window.addEventListener('scroll',()=>{document.getElementById('scrollBtn').classList.toggle('visible',window.scrollY>300)});
 </script>
