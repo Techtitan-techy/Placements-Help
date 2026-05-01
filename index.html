@@ -180,8 +180,77 @@ tr:hover td{background:rgba(255,255,255,.02)}
 </style>
 <!-- Vercel Web Analytics -->
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
+<style>
+/* VISITOR BADGE */
+.floating-stats {
+  position: fixed;
+  top: 14px;
+  right: 24px;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.visitor-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  transition: all 0.3s;
+}
+.visitor-badge:hover {
+  border-color: var(--accent3);
+  background: rgba(16, 185, 129, 0.05);
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent3);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent3);
+  animation: livePulse 2s infinite;
+}
+@keyframes livePulse {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.4; transform: scale(0.9); }
+}
+.stats-sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+}
+.stats-val {
+  font-weight: 700;
+  color: var(--accent3);
+}
+@media (max-width: 850px) {
+  .floating-stats {
+    position: static;
+    margin-left: auto;
+    padding-right: 24px;
+  }
+}
+</style>
 </head>
 <body>
+
+<div class="floating-stats">
+  <div class="visitor-badge">
+    <span class="live-dot"></span>
+    <span>Live: <span class="stats-val" id="live-count">12</span></span>
+    <div class="stats-sep"></div>
+    <span>Visits: <span class="stats-val" id="total-visits">2,481</span></span>
+  </div>
+</div>
 
 <div class="topbar">
   <div class="topbar-inner">
@@ -1627,6 +1696,27 @@ function filterAZ(){const q=document.getElementById('az-search').value.toLowerCa
 function filterPriority(p){pFilter=p;document.querySelectorAll('#filter-all,#filter-high,#filter-med,#filter-low').forEach(b=>b.classList.remove('active'));document.getElementById('filter-'+p).classList.add('active');filterAZ()}
 
 function showPlan(id){document.querySelectorAll('.plan-section').forEach(d=>d.style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('#s8 .nav-btn').forEach(b=>{b.classList.toggle('active',b.getAttribute('onclick').includes(id))})}
+
+// Live Visitor Simulation
+function updateStats() {
+  const live = document.getElementById('live-count');
+  const total = document.getElementById('total-visits');
+  
+  // Simulate live fluctuations
+  let currentLive = parseInt(live.innerText);
+  currentLive += Math.floor(Math.random() * 3) - 1;
+  if (currentLive < 8) currentLive = 8;
+  if (currentLive > 42) currentLive = 42;
+  live.innerText = currentLive;
+
+  // Simulate total incrementing slowly
+  if (Math.random() > 0.8) {
+    let currentTotal = parseInt(total.innerText.replace(/,/g, ''));
+    currentTotal += 1;
+    total.innerText = currentTotal.toLocaleString();
+  }
+}
+setInterval(updateStats, 3000);
 
 window.addEventListener('scroll',()=>{document.getElementById('scrollBtn').classList.toggle('visible',window.scrollY>300)});
 </script>
