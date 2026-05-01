@@ -171,6 +171,11 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .harsh-truth strong{color:#fca5a5}
 .harsh-truth ul{padding-left:16px;margin-top:6px}
 .harsh-truth li{margin-bottom:4px}
+.footer{text-align:center;padding:60px 24px 40px;border-top:1px solid var(--border);margin-top:40px;background:rgba(10,10,15,0.5)}
+.footer-text{font-family:var(--font-body);font-size:14px;color:var(--muted)}
+.footer-credit{font-family:var(--font-head);font-weight:700;color:var(--accent);margin-bottom:8px;font-size:16px}
+.footer-heart{color:#ef4444;display:inline-block;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
 @media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}.plan-grid{grid-template-columns:repeat(4,1fr)}}
 </style>
 </head>
@@ -1595,6 +1600,14 @@ tr:hover td{background:rgba(255,255,255,.02)}
 </div>
 
 </div><!-- end .page -->
+
+<footer class="footer">
+  <div class="footer-credit">Created by Karthikesh</div>
+  <div class="footer-text">
+    Because I genuinely care about your future, even when the truth is hard to hear. <br>
+    Build with <span class="footer-heart">♥</span> for every student who is brave enough to try.
+  </div>
+</footer>
 
 <button class="scroll-top" id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
