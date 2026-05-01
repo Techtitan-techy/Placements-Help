@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Placement Sheet — LinkedIn Top 25 Companies 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0f;--surface:#13131a;--card:#1a1a24;--border:#2a2a3a;
+  --accent:#f59e0b;--accent2:#3b82f6;--accent3:#10b981;--accent4:#ef4444;
+  --text:#f0f0f5;--muted:#8888aa;--sub:#5555770;
+  --high:#ef4444;--med:#f59e0b;--low:#10b981;
+  --font-head:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.7;min-height:100vh}
+
+/* NAV */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 24px}
+.topbar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;height:56px;overflow-x:auto;scrollbar-width:none}
+.topbar-inner::-webkit-scrollbar{display:none}
+.brand{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--accent);white-space:nowrap;margin-right:8px}
+.nav-btn{background:none;border:1px solid transparent;color:var(--muted);font-family:var(--font-body);font-size:13px;padding:6px 14px;border-radius:6px;cursor:pointer;white-space:nowrap;transition:all .2s}
+.nav-btn:hover{color:var(--text);border-color:var(--border)}
+.nav-btn.active{background:var(--accent);color:#000;font-weight:600;border-color:var(--accent)}
+
+/* LAYOUT */
+.page{max-width:1200px;margin:0 auto;padding:32px 24px}
+.section{display:none}
+.section.active{display:block}
+
+/* TYPOGRAPHY */
+h1{font-family:var(--font-head);font-size:2.2rem;font-weight:800;line-height:1.2}
+h2{font-family:var(--font-head);font-size:1.5rem;font-weight:700;margin-bottom:16px;color:var(--text)}
+h3{font-family:var(--font-head);font-size:1.1rem;font-weight:600;margin-bottom:10px;color:var(--text)}
+h4{font-size:.95rem;font-weight:500;color:var(--accent);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+p{color:#c0c0d8;margin-bottom:10px}
+ul,ol{padding-left:18px;color:#c0c0d8}
+li{margin-bottom:4px}
+code{font-family:var(--font-mono);font-size:12px;background:#1e1e2e;padding:2px 6px;border-radius:4px;color:#a78bfa}
+
+/* HERO */
+.hero{text-align:center;padding:48px 0 40px;border-bottom:1px solid var(--border);margin-bottom:40px}
+.hero .badge{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--accent);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:16px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em}
+.hero h1{background:linear-gradient(135deg,#f59e0b,#f0f0f5 60%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.hero p{color:var(--muted);font-size:1rem;max-width:600px;margin:0 auto}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:16px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+.card-sm{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.card-accent{border-color:rgba(245,158,11,.4);background:rgba(245,158,11,.04)}
+.card-blue{border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.04)}
+.card-green{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.04)}
+.card-red{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.04)}
+
+/* BADGES */
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:10px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.04em}
+.badge-high{background:rgba(239,68,68,.2);color:#fca5a5;border:1px solid rgba(239,68,68,.3)}
+.badge-med{background:rgba(245,158,11,.2);color:#fcd34d;border:1px solid rgba(245,158,11,.3)}
+.badge-low{background:rgba(16,185,129,.2);color:#6ee7b7;border:1px solid rgba(16,185,129,.3)}
+.badge-info{background:rgba(59,130,246,.2);color:#93c5fd;border:1px solid rgba(59,130,246,.3)}
+.badge-purple{background:rgba(139,92,246,.2);color:#c4b5fd;border:1px solid rgba(139,92,246,.3)}
+
+/* TAGS */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:11px;padding:3px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:var(--font-mono)}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:13.5px}
+th{text-align:left;padding:10px 14px;border-bottom:2px solid var(--border);color:var(--accent);font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+td{padding:10px 14px;border-bottom:1px solid var(--border);color:#c0c0d8;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border);background:var(--card)}
+
+/* PHASE STEPPER */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:24px}
+.phase{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden}
+.phase::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.phase-1::before{background:#ef4444}
+.phase-2::before{background:#f59e0b}
+.phase-3::before{background:#3b82f6}
+.phase-4::before{background:#10b981}
+.phase-5::before{background:#8b5cf6}
+.phase-6::before{background:#ec4899}
+.phase-num{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-bottom:4px}
+.phase h3{font-size:.95rem;margin-bottom:8px}
+.phase ul{font-size:13px;padding-left:14px}
+
+/* CHECKLIST */
+.checklist{list-style:none;padding:0}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:14px;color:#c0c0d8}
+.checklist li:last-child{border-bottom:none}
+.chk{width:18px;height:18px;min-width:18px;border-radius:4px;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;margin-top:2px}
+.chk.done{background:var(--accent3);border-color:var(--accent3)}
+.chk.done::after{content:'✓';color:#000;font-size:11px;font-weight:700}
+.checklist li.done-item span{text-decoration:line-through;color:var(--muted)}
+
+/* ROADMAP TIMELINE */
+.timeline{position:relative;padding-left:28px;margin-bottom:24px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:20px}
+.tl-dot{position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl-item.blue .tl-dot{background:var(--accent2)}
+.tl-item.green .tl-dot{background:var(--accent3)}
+.tl-item.red .tl-dot{background:var(--accent4)}
+.tl-item.purple .tl-dot{background:#8b5cf6}
+
+/* COMPANY CARDS */
+.company-group{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:20px}
+.company-logos{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.co-tag{font-size:12px;font-weight:600;padding:4px 12px;border-radius:6px;font-family:var(--font-mono);background:var(--surface);border:1px solid var(--border);color:var(--text)}
+
+/* PROGRESS BARS */
+.prog-wrap{margin:6px 0}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:4px}
+.prog{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;transition:width .6s ease}
+
+/* ACCORDION */
+.acc-item{border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden}
+.acc-head{padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--card);font-weight:500;font-size:14px;user-select:none;transition:background .2s}
+.acc-head:hover{background:rgba(255,255,255,.03)}
+.acc-body{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.acc-item.open .acc-body{max-height:800px;padding:14px 18px}
+.acc-arrow{transition:transform .3s;color:var(--muted);font-size:12px}
+.acc-item.open .acc-arrow{transform:rotate(180deg)}
+
+/* SEARCH */
+.search-bar{width:100%;background:var(--card);border:1px solid var(--border);color:var(--text);font-family:var(--font-body);font-size:14px;padding:10px 16px;border-radius:8px;outline:none;margin-bottom:20px}
+.search-bar:focus{border-color:var(--accent)}
+.search-bar::placeholder{color:var(--muted)}
+
+/* STUDY PLAN */
+.plan-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:16px}
+.day-cell{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:8px 4px;text-align:center;font-size:11px}
+.day-cell.highlight{background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3)}
+.day-cell .day-num{font-family:var(--font-mono);color:var(--muted);font-size:10px}
+.day-cell .day-topic{color:var(--text);font-weight:500;margin-top:2px;font-size:10px;line-height:1.3}
+
+/* PRIORITY TABLE */
+.priority-section{margin-bottom:32px}
+
+/* SCROLLTOP */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:40px;height:40px;background:var(--accent);color:#000;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;z-index:200}
+.scroll-top.visible{opacity:1}
+
+/* UTILS */
+.divider{border:none;border-top:1px solid var(--border);margin:28px 0}
+.flex{display:flex;gap:12px;flex-wrap:wrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.mt-sm{margin-top:8px}.mt-md{margin-top:16px}.mt-lg{margin-top:28px}
+.mb-md{margin-bottom:16px}.mb-lg{margin-bottom:28px}
+.text-accent{color:var(--accent)}
+.text-muted{color:var(--muted)}
+.text-green{color:var(--accent3)}
+.text-blue{color:var(--accent2)}
+.text-red{color:var(--accent4)}
+.mono{font-family:var(--font-mono);font-size:13px}
+.highlight-box{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:12px 16px;margin:12px 0}
+.tip-box{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:8px;padding:12px 16px;margin:12px 0}
+.warn-box{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:12px 16px;margin:12px 0}
+.harsh-truth{background:linear-gradient(135deg,rgba(220,38,38,.1),rgba(190,18,60,.08));border:1px solid rgba(220,38,38,.35);border-left:4px solid #dc2626;border-radius:10px;padding:18px 20px;margin:24px 0;position:relative;overflow:hidden}
+.harsh-truth::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(220,38,38,.08),transparent 70%);pointer-events:none}
+.harsh-truth .ht-label{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#fca5a5;margin-bottom:10px;background:rgba(220,38,38,.2);padding:3px 10px;border-radius:5px}
+.harsh-truth .ht-title{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:#fca5a5;margin-bottom:8px;line-height:1.3}
+.harsh-truth p,.harsh-truth li{color:#e0c4c4;font-size:13.5px;line-height:1.65}
+.harsh-truth strong{color:#fca5a5}
+.harsh-truth ul{padding-left:16px;margin-top:6px}
+.harsh-truth li{margin-bottom:4px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}.plan-grid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">PLACEMENT 2026</div>
+    <button class="nav-btn active" onclick="show(0)">Overview</button>
+    <button class="nav-btn" onclick="show(1)">A–Z Concepts</button>
+    <button class="nav-btn" onclick="show(2)">Roadmap</button>
+    <button class="nav-btn" onclick="show(3)">DSA Topics</button>
+    <button class="nav-btn" onclick="show(4)">CS Fundamentals</button>
+    <button class="nav-btn" onclick="show(5)">Aptitude</button>
+    <button class="nav-btn" onclick="show(6)">Projects & Resume</button>
+    <button class="nav-btn" onclick="show(7)">Company-Specific</button>
+    <button class="nav-btn" onclick="show(8)">Study Plans</button>
+    <button class="nav-btn" onclick="show(9)">Final Checklist</button>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ==================== SECTION 0: OVERVIEW ==================== -->
+<div class="section active" id="s0">
+  <div class="hero">
+    <div class="badge">LinkedIn Top 25 — India 2026</div>
+    <h1>Striver-Style Placement Sheet</h1>
+    <p>Complete zero-to-interview-ready guide for  students targeting all 25 dream companies. Built for real placement outcomes, not theory overload.</p>
+  </div>
+
+  <h2>Company Difficulty Tiers</h2>
+  <div class="card-grid">
+    <div class="card card-red">
+      <h4 style="color:#fca5a5">Tier 1 — Hardest</h4>
+      <div class="tags" style="margin-bottom:10px"><span class="tag">Amazon</span><span class="tag">Alphabet</span><span class="tag">Microsoft</span><span class="tag">NVIDIA</span><span class="tag">Marvell</span></div>
+      <p style="font-size:13px">Demand strong DSA (LeetCode Hard), deep CS fundamentals, system design, and multiple grueling rounds. Expect 4–6 interview rounds. Bar is extremely high.</p>
+    </div>
+    <div class="card card-accent">
+      <h4>Tier 2 — Challenging</h4>
+      <div class="tags" style="margin-bottom:10px"><span class="tag">JPMorganChase</span><span class="tag">Morgan Stanley</span><span class="tag">BCG</span><span class="tag">SAP</span><span class="tag">ServiceNow</span><span class="tag">SanDisk</span></div>
+      <p style="font-size:13px">Strong DSA + domain knowledge. Finance firms add SQL and quant reasoning. BCG needs case interviews. 3–5 rounds.</p>
+    </div>
+    <div class="card card-blue">
+      <h4 style="color:#93c5fd">Tier 3 — Moderate</h4>
+      <div class="tags" style="margin-bottom:10px"><span class="tag">IBM</span><span class="tag">Fidelity</span><span class="tag">HSBC</span><span class="tag">Bank of America</span><span class="tag">Wells Fargo</span><span class="tag">HP</span></div>
+      <p style="font-size:13px">Good DSA + OOPs + SQL + fundamentals. Communication and accuracy matter. 3–4 rounds. Finance awareness needed.</p>
+    </div>
+    <div class="card card-green">
+      <h4 style="color:#6ee7b7">Tier 4 — Accessible</h4>
+      <div class="tags" style="margin-bottom:10px"><span class="tag">Infosys</span><span class="tag">Accenture</span><span class="tag">EY</span><span class="tag">Eli Lilly</span><span class="tag">Stryker</span><span class="tag">Thomson Reuters</span><span class="tag">RTX</span><span class="tag">Royal Caribbean</span></div>
+      <p style="font-size:13px">Aptitude + basic coding + communication + domain awareness. Good fundamentals + projects can clear these. 2–3 rounds.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>What Each Company Type Expects</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Company Type</th><th>Examples</th><th>Primary Expectation</th><th>Key Skills</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-high">Product / FAANG+</span></td><td>Amazon, Alphabet, Microsoft, NVIDIA</td><td>Problem-solving excellence</td><td>DSA, System Design, CS Depth, Leadership Principles</td></tr>
+        <tr><td><span class="badge badge-med">Enterprise Software</span></td><td>SAP, ServiceNow, IBM</td><td>Full-stack + enterprise thinking</td><td>OOPs, Databases, APIs, Cloud basics, Product sense</td></tr>
+        <tr><td><span class="badge badge-info">Finance / Banking</span></td><td>JPMorgan, HSBC, Fidelity, BofA</td><td>Accuracy + reasoning + tech</td><td>DSA, SQL, OOPs, Quant aptitude, Finance basics</td></tr>
+        <tr><td><span class="badge badge-purple">Consulting</span></td><td>BCG, EY, Accenture</td><td>Communication + structured thinking</td><td>Case studies, aptitude, logical reasoning, basic tech</td></tr>
+        <tr><td><span class="badge badge-low">Semiconductor / Hardware</span></td><td>Marvell, SanDisk, RTX</td><td>Low-level systems + CS fundamentals</td><td>C/C++, OS, Computer Architecture, Embedded basics</td></tr>
+        <tr><td><span class="badge badge-info">Healthcare / Domain</span></td><td>Eli Lilly, Stryker, Thomson Reuters</td><td>Tech + domain curiosity</td><td>Coding basics, domain awareness, communication, projects</td></tr>
+        <tr><td><span class="badge badge-med">Service / IT</span></td><td>Infosys, Accenture</td><td>Communication + trainability</td><td>Aptitude, basic coding, OOPS, SQL, attitude</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+  <h2>Common Skills Needed Across ALL 25 Companies</h2>
+  <div class="card-grid">
+    <div class="card-sm">
+      <h3>Technical Foundation</h3>
+      <ul>
+        <li>Arrays, Strings, Hashing — every company tests these</li>
+        <li>OOPs concepts — universal across all roles</li>
+        <li>SQL basics — appears in 80% of company tests</li>
+        <li>Time & Space complexity analysis</li>
+        <li>Clean, readable code in Python/Java/C++</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Structured communication — explain your thought process</li>
+        <li>Problem-solving approach — break down before coding</li>
+        <li>Behavioral answers using STAR method</li>
+        <li>Resume clarity — every word must be defensible</li>
+        <li>Asking good clarifying questions</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Aptitude & Reasoning</h3>
+      <ul>
+        <li>Quantitative reasoning — speed + accuracy</li>
+        <li>Logical reasoning patterns</li>
+        <li>Verbal ability (especially for service + finance)</li>
+        <li>Data interpretation basics</li>
+        <li>Puzzle/estimation thinking</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong class="text-accent">If you have only 1 month:</strong> Focus on Arrays, Strings, Hashing, OOPs, SQL, 2 strong projects, and STAR behavioral answers. That alone can crack Tier 3–4 companies.
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #1</div>
+    <div class="ht-title">Nobody owes you a placement. The market doesn't care about your potential.</div>
+    <p>There are <strong>1.5 million+ engineering graduates every year in India</strong>. The 25 companies on this list hire a tiny fraction. Your CGPA alone won't save you. Your college name alone won't save you. The only thing that separates the placed from the unplaced is <strong>what you can demonstrate under pressure in 45 minutes</strong>. If you can't solve a LeetCode Medium right now without hints — you're not ready. And "I'll start tomorrow" is the most expensive sentence in placement season.</p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1: A-Z CONCEPTS ==================== -->
+<div class="section" id="s1">
+  <h2>A–Z Concepts Required for Placements</h2>
+  <p class="text-muted" style="margin-bottom:16px">Every concept you need, why it matters, and how deep to go. Filter by priority.</p>
+
+  <input class="search-bar" id="az-search" placeholder="Search concept... e.g. Dynamic Programming, SQL, OOPs" oninput="filterAZ()">
+  <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+    <button class="nav-btn active" id="filter-all" onclick="filterPriority('all')">All</button>
+    <button class="nav-btn" id="filter-high" onclick="filterPriority('high')">High Priority</button>
+    <button class="nav-btn" id="filter-med" onclick="filterPriority('med')">Medium Priority</button>
+    <button class="nav-btn" id="filter-low" onclick="filterPriority('low')">Low Priority</button>
+  </div>
+
+  <div class="tbl-wrap">
+  <table id="az-table">
+    <thead><tr><th>Concept</th><th>What It Is</th><th>Why It Matters</th><th>Used In</th><th>Difficulty</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr data-p="high"><td class="mono">A — Arrays</td><td>Contiguous memory blocks; index-based access</td><td>Foundation of almost every DSA problem; appears in 95% of tests</td><td>All companies</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">A — Aptitude</td><td>Quant + reasoning + verbal ability</td><td>Mandatory for service, finance, consulting companies to get shortlisted</td><td>Infosys, Accenture, EY, JPMC, BCG</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">A — API Design</td><td>REST/GraphQL interface design principles</td><td>System design rounds, backend project discussions</td><td>Amazon, SAP, ServiceNow, IBM</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">B — Binary Search</td><td>O(log n) search on sorted data</td><td>Pattern extends to many optimization problems; very common in tests</td><td>Amazon, Google, Microsoft, NVIDIA</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">B — Backtracking</td><td>Recursion + pruning for combinatorial problems</td><td>Permutations, N-Queens, Sudoku — appears in product company OAs</td><td>Amazon, Alphabet, Microsoft</td><td>Med–Hard</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">B — Bit Manipulation</td><td>Bitwise operations XOR, AND, OR, shifts</td><td>SanDisk, Marvell love this; compact tricks in competitive coding</td><td>Marvell, SanDisk, NVIDIA</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">C — Complexity Analysis</td><td>Big-O time and space analysis</td><td>Every coding round expects you to state and justify complexity</td><td>All companies</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">C — Computer Networks</td><td>OSI model, TCP/IP, HTTP, DNS, load balancing</td><td>System design, backend roles, network-related interview questions</td><td>Amazon, Microsoft, IBM, SAP</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">D — Dynamic Programming</td><td>Memoization / tabulation for optimal substructure problems</td><td>Separates average from great candidates; Amazon, Google love it</td><td>Amazon, Alphabet, Microsoft, JPMC</td><td>Hard</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">D — DBMS</td><td>Database fundamentals — normalization, ACID, transactions</td><td>Backend roles, finance companies, every company with data systems</td><td>JPMC, BofA, IBM, SAP, Fidelity</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">D — Data Structures</td><td>Core structures — arrays, linked lists, trees, graphs, heaps</td><td>Foundation of all technical interviews</td><td>All companies</td><td>Easy–Hard</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">E — Embedded Systems</td><td>Low-level programming for hardware</td><td>RTX, Marvell, SanDisk hardware roles; not needed for software roles</td><td>RTX, Marvell, SanDisk</td><td>Hard</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="med"><td class="mono">F — Fenwick Tree</td><td>BIT for prefix sum queries in O(log n)</td><td>Competitive coding, rarely in standard placements</td><td>Competitive coding oriented roles</td><td>Hard</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">G — Graphs</td><td>BFS, DFS, shortest paths, topological sort</td><td>Very common in product company interviews; models real-world problems</td><td>Amazon, Alphabet, Microsoft, NVIDIA</td><td>Med–Hard</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">G — Greedy</td><td>Locally optimal choices for globally optimal solution</td><td>Interval scheduling, activity selection — medium difficulty but high frequency</td><td>Amazon, Alphabet, Morgan Stanley</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">G — Git / GitHub</td><td>Version control basics — commit, branch, merge, PR</td><td>All practical job roles; resume and project discussions</td><td>All companies</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">H — Hashing</td><td>HashMap/HashSet for O(1) lookup</td><td>Frequency problems, two-sum, duplicate detection — extremely common</td><td>All companies</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">H — Heaps</td><td>Priority queues, min/max heap operations</td><td>Top-K problems, scheduling — medium-high frequency in OAs</td><td>Amazon, Microsoft, Alphabet</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">H — HR / Behavioral</td><td>STAR-method answers to behavioral questions</td><td>Every company has this round; can override technical performance</td><td>All companies</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">I — Intervals</td><td>Merge, insert, find non-overlapping intervals</td><td>Calendar/scheduling problems; medium frequency</td><td>Amazon, Google, Fidelity</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="low"><td class="mono">J — JVM internals</td><td>Java garbage collection, memory model</td><td>Rarely asked unless Java backend role; niche</td><td>IBM, SAP Java roles</td><td>Hard</td><td><span class="badge badge-low">Low</span></td></tr>
+      <tr data-p="high"><td class="mono">L — Linked Lists</td><td>Singly/doubly linked lists, cycle detection, reversal</td><td>Classic interview questions; tests pointer manipulation</td><td>All companies</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">L — Linux / Unix Basics</td><td>Shell commands, processes, file permissions</td><td>All backend and system roles; common in IBM, RTX, HP</td><td>IBM, RTX, HP, Microsoft</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">M — Matrix / 2D Arrays</td><td>Grid problems, BFS/DFS on matrix</td><td>Frequent in OAs; island count, shortest path in grid</td><td>Amazon, Alphabet, Marvell</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">N — Number Theory</td><td>GCD, LCM, prime sieve, modular arithmetic</td><td>Appears in aptitude + math-heavy OAs</td><td>JPMC, Morgan Stanley, NVIDIA</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">O — OOPs</td><td>Encapsulation, Inheritance, Polymorphism, Abstraction</td><td>Design questions, code quality; universal expectation</td><td>All companies</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">O — Operating Systems</td><td>Processes, threads, scheduling, memory management</td><td>System-level questions; very common in product + semiconductor roles</td><td>NVIDIA, Marvell, Microsoft, IBM, RTX</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">P — Prefix Sum</td><td>Precomputed cumulative sums for range queries</td><td>Subarray sum problems; extremely common trick</td><td>All companies with DSA focus</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">P — Probability</td><td>Basic probability + Bayes theorem</td><td>Finance companies, NVIDIA, quant-related roles</td><td>JPMC, Morgan Stanley, NVIDIA</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="med"><td class="mono">Q — Queue / Deque</td><td>FIFO data structures, sliding window problems</td><td>BFS, sliding window maximum, stream problems</td><td>All product companies</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">R — Recursion</td><td>Function calling itself with base case + recursive case</td><td>Trees, divide & conquer; foundational for DP and backtracking</td><td>All companies</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">S — SQL</td><td>SELECT, JOIN, GROUP BY, subqueries, window functions</td><td>Finance, enterprise software, data roles — very high frequency</td><td>JPMC, BofA, IBM, SAP, Fidelity, HSBC</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">S — Sliding Window</td><td>Fixed/variable window over arrays/strings</td><td>Substring problems, max sum subarrays — pattern is very reusable</td><td>Amazon, Alphabet, Microsoft</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">S — Stacks</td><td>LIFO data structure; monotonic stack patterns</td><td>Next greater element, expression evaluation — high frequency</td><td>All companies</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">S — Sorting</td><td>QuickSort, MergeSort, counting sort; custom comparators</td><td>Every interview; must know when to use which and implement from scratch</td><td>All companies</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">S — Segment Tree</td><td>Range query + update in O(log n)</td><td>Rare in placements; appears in competitive tracks at NVIDIA, Marvell</td><td>NVIDIA, Marvell, competitive roles</td><td>Hard</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">S — System Design</td><td>HLD/LLD — design scalable systems</td><td>Senior-leaning roles at Amazon, Google, Microsoft, ServiceNow</td><td>Amazon, Alphabet, Microsoft, ServiceNow</td><td>Hard</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">T — Trees</td><td>Binary trees, traversals, LCA, diameter, paths</td><td>Very high frequency across all product companies; deep topic</td><td>Amazon, Alphabet, Microsoft, NVIDIA</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">T — Tries</td><td>Prefix tree for string matching / autocomplete</td><td>Google, Amazon — word search, prefix problems</td><td>Alphabet, Amazon, ServiceNow</td><td>Med–Hard</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">T — Two Pointers</td><td>Two indices moving through array — collision or same direction</td><td>Sorted array problems, container problems; very high ROI</td><td>All companies with DSA</td><td>Easy–Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">T — Topological Sort</td><td>Ordering of DAG nodes; Kahn's algorithm or DFS</td><td>Task scheduling, build systems, prerequisite problems</td><td>Amazon, Alphabet, Microsoft</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="med"><td class="mono">U — Union Find</td><td>Disjoint set union for connected components</td><td>Kruskal's MST, network connectivity problems</td><td>Amazon, Alphabet, Marvell</td><td>Med</td><td><span class="badge badge-med">Med</span></td></tr>
+      <tr data-p="high"><td class="mono">V — Version Control</td><td>Git branching, commits, rebasing, pull requests</td><td>Every job interview — practical software engineering</td><td>All companies</td><td>Easy</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="high"><td class="mono">W — Web Fundamentals</td><td>HTTP, REST, JSON, CORS, cookies, auth basics</td><td>Full-stack and backend roles; system design foundation</td><td>Amazon, SAP, ServiceNow, IBM, HP</td><td>Med</td><td><span class="badge badge-high">High</span></td></tr>
+      <tr data-p="low"><td class="mono">X — XGBoost / ML</td><td>Gradient boosting, ML basics</td><td>Data/ML roles at Alphabet, NVIDIA, Eli Lilly research</td><td>Alphabet, NVIDIA, Eli Lilly</td><td>Hard</td><td><span class="badge badge-low">Low</span></td></tr>
+      <tr data-p="low"><td class="mono">Y — YAML / Config</td><td>Configuration files; CI/CD pipelines</td><td>DevOps adjacent roles; not primary interview topic</td><td>ServiceNow, IBM, HP</td><td>Easy</td><td><span class="badge badge-low">Low</span></td></tr>
+      <tr data-p="med"><td class="mono">Z — Zero-based Indexing Tricks</td><td>Off-by-one, modulo patterns, circular arrays</td><td>Common bug pattern; tested in implementation-heavy problems</td><td>All coding rounds</td><td>Easy</td><td><span class="badge badge-med">Med</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="harsh-truth" style="margin-top:20px">
+    <div class="ht-label">💀 Harsh Truth #2</div>
+    <div class="ht-title">Watching tutorials is NOT studying. Solving problems is.</div>
+    <p>You can watch 200 hours of YouTube DSA content and still fail your first OA. <strong>Passive learning creates an illusion of competence.</strong> If you watched the solution before struggling for at least 30 minutes, you didn't learn it — you just consumed entertainment. The students who get placed are the ones who sit with a blank editor, get stuck, feel frustrated, and push through. That discomfort IS the learning. Stop collecting bookmarks and start solving problems.</p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: ROADMAP ==================== -->
+<div class="section" id="s2">
+  <h2>Striver-Style Placement Roadmap</h2>
+  <p class="text-muted mb-lg">Six structured phases from zero to interview-ready. Follow in order — don't skip phases.</p>
+
+  <div class="phases">
+    <div class="phase phase-1">
+      <div class="phase-num">Phase 1 · 3–4 weeks</div>
+      <h3 class="text-red">Beginner</h3>
+      <ul>
+        <li>Pick ONE language (Python/Java/C++)</li>
+        <li>Arrays, Strings, Hashing</li>
+        <li>Basic Sorting & Searching</li>
+        <li>OOPs fundamentals</li>
+        <li>Aptitude foundations</li>
+        <li>SQL basics (SELECT, WHERE, JOIN)</li>
+        <li>Git basics + GitHub profile setup</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">Target: Solve 50 Easy LeetCode. Crack Infosys/Accenture online assessment.</div>
+    </div>
+    <div class="phase phase-2">
+      <div class="phase-num">Phase 2 · 4–5 weeks</div>
+      <h3>Intermediate</h3>
+      <ul>
+        <li>Linked Lists, Stacks, Queues</li>
+        <li>Recursion, Two Pointers, Sliding Window</li>
+        <li>Binary Search advanced patterns</li>
+        <li>Trees + BST (traversals, LCA)</li>
+        <li>Heaps + Greedy</li>
+        <li>DBMS + OS basics</li>
+        <li>Start project #1</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">Target: 100+ LeetCode Easy-Med. Crack IBM/HP/EY level.</div>
+    </div>
+    <div class="phase phase-3">
+      <div class="phase-num">Phase 3 · 5–6 weeks</div>
+      <h3 class="text-blue">Advanced</h3>
+      <ul>
+        <li>Graphs (BFS, DFS, Topo Sort, Dijkstra)</li>
+        <li>Dynamic Programming (1D, 2D, knapsack)</li>
+        <li>Union Find, Tries, Intervals</li>
+        <li>Prefix Sum, Bit Manipulation</li>
+        <li>CN + System Design basics</li>
+        <li>Advanced SQL (CTEs, window functions)</li>
+        <li>Project #2 (AI/ML or full-stack)</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">Target: 200+ LeetCode. Crack JPMorgan/Fidelity/ServiceNow level.</div>
+    </div>
+    <div class="phase phase-4">
+      <div class="phase-num">Phase 4 · 3–4 weeks</div>
+      <h3 class="text-green">Interview Prep</h3>
+      <ul>
+        <li>System Design HLD/LLD practice</li>
+        <li>Resume finalization with metrics</li>
+        <li>STAR behavioral stories (10–12)</li>
+        <li>Company-specific OA pattern study</li>
+        <li>Aptitude timed tests daily</li>
+        <li>Mock technical interviews (2/week)</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">Target: Full readiness for Tier 2–3 companies. Ready for Amazon/Microsoft OA.</div>
+    </div>
+    <div class="phase phase-5">
+      <div class="phase-num">Phase 5 · 2 weeks</div>
+      <h3 style="color:#8b5cf6">Revision</h3>
+      <ul>
+        <li>Revise all patterns with flashcards</li>
+        <li>Redo 30 most important problems</li>
+        <li>CS fundamentals speed revision</li>
+        <li>SQL revision + practice</li>
+        <li>Project talking points rehearsal</li>
+        <li>Resume proofreading</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">No new topics — consolidate only.</div>
+    </div>
+    <div class="phase phase-6">
+      <div class="phase-num">Phase 6 · Ongoing</div>
+      <h3 style="color:#ec4899">Mock Interviews</h3>
+      <ul>
+        <li>Pramp / Interviewing.io sessions</li>
+        <li>Peer mock with fellow  students</li>
+        <li>Record and review your answers</li>
+        <li>HR round roleplay</li>
+        <li>Company-specific practice</li>
+        <li>Timed coding contests weekly</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:12px">Target: 10+ full mock interviews before actual placements.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>Learning Order — Week by Week</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div><h3>Week 1–2: Language Setup + Arrays</h3><p>Master your language's syntax. Solve 2-pointer, prefix sum, and sliding window on arrays. Target 25 problems.</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><h3>Week 3–4: Strings + Hashing + Sorting</h3><p>Anagrams, palindromes, frequency maps. Learn merge sort and quicksort from scratch.</p></div>
+    <div class="tl-item blue"><div class="tl-dot"></div><h3>Week 5–6: Linked Lists + Stacks + Queues</h3><p>Reversal, cycle detection, LRU cache. Monotonic stack patterns.</p></div>
+    <div class="tl-item blue"><div class="tl-dot"></div><h3>Week 7–8: Recursion + Binary Search + Trees</h3><p>All traversals, LCA, diameter, height. Binary search on answer space.</p></div>
+    <div class="tl-item green"><div class="tl-dot"></div><h3>Week 9–10: BST + Heaps + Greedy</h3><p>Kth element problems. Top-K patterns. Activity selection, interval problems.</p></div>
+    <div class="tl-item green"><div class="tl-dot"></div><h3>Week 11–13: Graphs + Tries + Union Find</h3><p>BFS, DFS, Dijkstra, Bellman-Ford, topological sort. Word search with Trie.</p></div>
+    <div class="tl-item red"><div class="tl-dot"></div><h3>Week 14–17: Dynamic Programming</h3><p>1D DP → 2D DP → Knapsack → String DP → Trees DP. 50+ DP problems minimum.</p></div>
+    <div class="tl-item red"><div class="tl-dot"></div><h3>Week 18–20: System Design + Company Prep</h3><p>HLD/LLD, CS fundamentals revision, company-specific mock OAs.</p></div>
+    <div class="tl-item purple"><div class="tl-dot"></div><h3>Week 21–24: Full Mock Mode</h3><p>Daily problems + weekly full interviews + behavioral prep + final revision.</p></div>
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #3</div>
+    <div class="ht-title">Your seniors who got placed weren't smarter. They just started earlier.</div>
+    <p>Every year, students panic in August when placements begin. They scramble to learn in 2 weeks what should've taken 4 months. <strong>The timeline above isn't optional — it's the minimum.</strong> If you're reading this in your final year and you haven't solved 100+ problems yet, you're already behind. Not "a little behind" — significantly behind. The gap between you and a prepared candidate isn't intelligence, it's the 500+ hours of deliberate practice they put in while you were "planning to start."</p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 3: DSA TOPICS ==================== -->
+<div class="section" id="s3">
+  <h2>DSA Topics — Complete Interview Guide</h2>
+  <p class="text-muted mb-lg">Every topic with patterns, questions, and company relevance. Study in this exact order.</p>
+
+  <div id="dsa-acc">
+
+    <div class="acc-item open">
+      <div class="acc-head" onclick="toggle(this)"><span>1. Arrays <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div>
+            <h4>Core Concepts</h4>
+            <ul><li>Static vs dynamic arrays</li><li>In-place operations</li><li>Two pointers (collision, fast-slow)</li><li>Sliding window (fixed/variable)</li><li>Prefix sums and difference arrays</li><li>Kadane's algorithm</li></ul>
+          </div>
+          <div>
+            <h4>Must-Know Patterns</h4>
+            <ul><li>Subarray with max sum (Kadane's)</li><li>Find pair with target sum (2 pointers)</li><li>Move zeros / remove duplicates in-place</li><li>Rotate array k times</li><li>Merge intervals</li><li>Trapping rainwater</li></ul>
+          </div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Two Sum</span><span class="tag">Best Time to Buy Stock</span><span class="tag">Container With Most Water</span><span class="tag">Product of Array Except Self</span><span class="tag">Maximum Subarray</span><span class="tag">3Sum</span><span class="tag">Merge Intervals</span><span class="tag">Jump Game</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> EVERY company. Arrays appear in 95%+ of all OAs.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>2. Strings <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>String immutability and StringBuilder</li><li>Pattern matching (KMP, Rabin-Karp)</li><li>Palindrome detection</li><li>Anagram detection</li><li>String parsing and tokenization</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Sliding window on strings</li><li>Two-pointer on strings</li><li>Character frequency map</li><li>Expand around center (palindrome)</li><li>Z-algorithm basics</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Longest Substring Without Repeating</span><span class="tag">Valid Anagram</span><span class="tag">Group Anagrams</span><span class="tag">Longest Palindromic Substring</span><span class="tag">Minimum Window Substring</span><span class="tag">Decode String</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Microsoft, Alphabet, JPMC, Thomson Reuters.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>3. Hashing <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>HashMap, HashSet internals</li><li>Collision resolution (chaining, open addressing)</li><li>Custom hash functions</li><li>Frequency maps</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Count frequency of elements</li><li>Two sum / four sum using hash</li><li>Find first non-repeating character</li><li>Longest consecutive sequence</li><li>Group by hash value</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Two Sum</span><span class="tag">LRU Cache</span><span class="tag">Longest Consecutive Sequence</span><span class="tag">Top K Frequent Elements</span><span class="tag">Isomorphic Strings</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> All companies. Quick pattern: if you see O(n²) brute force, hashing usually makes it O(n).</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>4. Linked List <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Singly, doubly, circular linked lists</li><li>Slow-fast pointer (Floyd's)</li><li>Sentinel nodes</li><li>Dummy head trick</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Detect and remove cycle</li><li>Reverse a linked list</li><li>Find middle node</li><li>Merge two sorted lists</li><li>Clone list with random pointer</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Reverse Linked List</span><span class="tag">Linked List Cycle II</span><span class="tag">Merge K Sorted Lists</span><span class="tag">Reorder List</span><span class="tag">Copy List with Random Pointer</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Microsoft, Marvell (hardware-level memory management).</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>5. Stack & Queue <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Stack: LIFO, call stack simulation</li><li>Monotonic stack (increasing/decreasing)</li><li>Queue: FIFO, BFS traversal</li><li>Deque: sliding window maximum</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Next greater / smaller element</li><li>Valid parentheses</li><li>Implement queue using stacks</li><li>Largest rectangle in histogram</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Valid Parentheses</span><span class="tag">Daily Temperatures</span><span class="tag">Largest Rectangle in Histogram</span><span class="tag">Sliding Window Maximum</span><span class="tag">Min Stack</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon (OA loves histogram), Microsoft, JPMC.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>6. Recursion & Backtracking <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Recursion tree visualization</li><li>Base case + recurrence relation</li><li>Backtracking = recursion + undo</li><li>Pruning for efficiency</li><li>Memoization bridge to DP</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>All subsets / permutations</li><li>N-Queens problem</li><li>Sudoku solver</li><li>Word search in grid</li><li>Combination sum</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Subsets</span><span class="tag">Permutations</span><span class="tag">Combination Sum</span><span class="tag">N-Queens</span><span class="tag">Letter Combinations of Phone Number</span><span class="tag">Word Search</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Alphabet, Microsoft — differentiates average from strong candidates.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>7. Binary Search <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Classic binary search on sorted array</li><li>Binary search on answer space</li><li>Upper bound / lower bound</li><li>Rotated sorted array tricks</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>"If X is possible, find min X" → binary search on answer</li><li>Find peak element</li><li>Search in rotated array</li><li>Find first/last occurrence</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Search in Rotated Sorted Array</span><span class="tag">Find Minimum in Rotated</span><span class="tag">Median of Two Sorted Arrays</span><span class="tag">Koko Eating Bananas</span><span class="tag">Capacity to Ship Packages</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Microsoft, NVIDIA, Marvell. Binary search on answer is a top 5 pattern.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>8. Trees <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Inorder, Preorder, Postorder, Level-order traversal</li><li>DFS vs BFS on trees</li><li>Height, diameter, LCA</li><li>Serialization / deserialization</li><li>Path sum problems</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Max path sum (global variable trick)</li><li>Find LCA using recursion</li><li>Level-order zigzag traversal</li><li>Construct tree from preorder+inorder</li><li>Symmetric/balanced tree check</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Maximum Depth of Binary Tree</span><span class="tag">Invert Binary Tree</span><span class="tag">Serialize and Deserialize</span><span class="tag">Binary Tree Maximum Path Sum</span><span class="tag">LCA of Binary Tree</span><span class="tag">Flatten Binary Tree to Linked List</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Alphabet, Microsoft — trees appear in 70%+ of product company interviews.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>9. BST <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>BST property: left < root < right</li><li>Search, insert, delete in O(h)</li><li>Inorder gives sorted sequence</li><li>AVL / Red-Black tree concepts</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Validate BST</li><li>Kth smallest in BST (inorder)</li><li>LCA in BST (leverage BST property)</li><li>Convert sorted array to BST</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Validate Binary Search Tree</span><span class="tag">Kth Smallest Element in BST</span><span class="tag">Delete Node in BST</span><span class="tag">Convert BST to Greater Tree</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Microsoft, Amazon, Fidelity.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>10. Heaps <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Min-heap and max-heap</li><li>Heapify: O(n), push/pop: O(log n)</li><li>Priority queue applications</li><li>Custom comparators</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Top K elements (use min-heap of size K)</li><li>Kth largest/smallest</li><li>Merge K sorted lists</li><li>Task scheduler with cooldown</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Kth Largest Element</span><span class="tag">Find Median from Data Stream</span><span class="tag">Task Scheduler</span><span class="tag">Top K Frequent Words</span><span class="tag">K Closest Points to Origin</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon (very common), NVIDIA, Morgan Stanley.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>11. Greedy <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <p>Make locally optimal choice at each step. Prove correctness via exchange argument. Key: greedy works when there's NO benefit to revisiting decisions.</p>
+        <div class="tags" style="margin-top:8px"><span class="tag">Jump Game</span><span class="tag">Gas Station</span><span class="tag">Meeting Rooms II</span><span class="tag">Minimum Number of Arrows</span><span class="tag">Candy</span><span class="tag">Assign Cookies</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Alphabet — interval and scheduling problems are greedy classics.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>12. Graphs <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>Adjacency list vs matrix</li><li>BFS (queue) and DFS (stack/recursion)</li><li>Cycle detection (directed + undirected)</li><li>Bipartite graph check</li><li>Connected components</li></ul></div>
+          <div><h4>Must-Know Patterns</h4><ul><li>Multi-source BFS (01 matrix, rotten oranges)</li><li>DFS for island count</li><li>Cycle detection via color-coding</li><li>Graph cloning</li><li>Course schedule (topological + cycle)</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Number of Islands</span><span class="tag">Clone Graph</span><span class="tag">Course Schedule</span><span class="tag">Pacific Atlantic Water Flow</span><span class="tag">Word Ladder</span><span class="tag">Alien Dictionary</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon, Alphabet, Microsoft, NVIDIA. Every product company loves graphs.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>13. Dynamic Programming <span class="badge badge-high" style="margin-left:8px">High · Hardest</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Core Concepts</h4><ul><li>1D DP: Fibonacci, house robber</li><li>2D DP: grid problems, LCS</li><li>0/1 Knapsack variants</li><li>String DP: edit distance, LCS, LPS</li><li>Tree DP: diameter, path sum</li><li>Bitmask DP for exponential states</li></ul></div>
+          <div><h4>Study Order</h4><ul><li>Step 1: Climbing stairs, Fibonacci</li><li>Step 2: House robber (1D)</li><li>Step 3: Coin change, unique paths</li><li>Step 4: Longest subsequences (LCS, LIS)</li><li>Step 5: Knapsack variants</li><li>Step 6: Palindrome DP, partition DP</li></ul></div>
+        </div>
+        <h4 style="margin-top:12px">Top Interview Questions</h4>
+        <div class="tags"><span class="tag">Coin Change</span><span class="tag">Longest Increasing Subsequence</span><span class="tag">Edit Distance</span><span class="tag">0/1 Knapsack</span><span class="tag">Longest Common Subsequence</span><span class="tag">Burst Balloons</span><span class="tag">Partition Equal Subset Sum</span></div>
+        <div class="warn-box" style="margin-top:10px">DP is the #1 differentiator for Amazon, Google, Microsoft. Spend at least 4 weeks on it alone. Do 50+ DP problems.</div>
+      </div>
+    </div>
+
+    <div class="harsh-truth">
+      <div class="ht-label">💀 Harsh Truth #4</div>
+      <div class="ht-title">You will not "figure out DSA during the exam." That's not how this works.</div>
+      <p>Every unplaced student says the same thing: "I understand the concepts, I just couldn't solve it in time." That's because <strong>understanding ≠ ability</strong>. You don't "understand" binary search until you can write it bug-free in 3 minutes without Googling. You don't "know" DP until you can identify the state transition in a new problem you've never seen. Interviewers have seen thousands of candidates. They can tell in 5 minutes whether you've actually practiced or just read about it. <strong>There is no shortcut. Solve the problems.</strong></p>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>14. Tries <span class="badge badge-med" style="margin-left:8px">Med</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <p>Prefix tree for string operations. Each node represents a character. Supports O(L) insert/search where L = word length.</p>
+        <div class="tags" style="margin-top:8px"><span class="tag">Implement Trie</span><span class="tag">Word Search II</span><span class="tag">Design Search Autocomplete</span><span class="tag">Replace Words</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Alphabet (autocomplete!), Amazon, ServiceNow.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>15. Shortest Path Algorithms <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <div class="grid2">
+          <div><h4>Algorithms</h4><ul><li>Dijkstra (non-negative weights, O((V+E)logV))</li><li>Bellman-Ford (negative weights, O(VE))</li><li>Floyd-Warshall (all pairs, O(V³))</li><li>BFS (unweighted graphs)</li></ul></div>
+          <div><h4>When to Use</h4><ul><li>BFS: unweighted shortest path</li><li>Dijkstra: positive weights, single source</li><li>Bellman-Ford: negative edges/cycles</li><li>Floyd-Warshall: all-pair distance</li></ul></div>
+        </div>
+        <div class="tags" style="margin-top:8px"><span class="tag">Network Delay Time</span><span class="tag">Cheapest Flights Within K Stops</span><span class="tag">Path With Minimum Effort</span><span class="tag">01 Matrix</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Alphabet, NVIDIA, RTX (maps/routing), Royal Caribbean (logistics).</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)"><span>16. Topological Sort <span class="badge badge-high" style="margin-left:8px">High</span></span><span class="acc-arrow">▼</span></div>
+      <div class="acc-body">
+        <p>Linear ordering of vertices in DAG such that for every edge u→v, u comes before v. Two approaches: Kahn's algorithm (BFS-based) and DFS-based.</p>
+        <div class="tags" style="margin-top:8px"><span class="tag">Course Schedule</span><span class="tag">Alien Dictionary</span><span class="tag">Parallel Courses</span><span class="tag">Minimum Height Trees</span></div>
+        <div class="highlight-box" style="margin-top:10px"><strong>Company Relevance:</strong> Amazon (build systems), Alphabet, Microsoft, ServiceNow.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 4: CS FUNDAMENTALS ==================== -->
+<div class="section" id="s4">
+  <h2>CS Fundamentals — Placement-Relevant Only</h2>
+  <p class="text-muted mb-lg">Study these in this order. Focus on the bold topics first.</p>
+
+  <div class="card-grid">
+    <div class="card card-accent">
+      <h3>DBMS <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <h4>What to study</h4>
+      <ul>
+        <li><strong>ACID properties</strong> — Atomicity, Consistency, Isolation, Durability</li>
+        <li><strong>Normalization</strong> — 1NF, 2NF, 3NF, BCNF with examples</li>
+        <li><strong>Transactions</strong> — commit, rollback, savepoints</li>
+        <li><strong>Indexing</strong> — B+ tree, clustered vs non-clustered</li>
+        <li><strong>Keys</strong> — Primary, Foreign, Candidate, Super</li>
+        <li>CAP Theorem basics</li>
+        <li>Deadlocks — detection and prevention</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">Most asked: "Explain ACID", "What is normalization?", "Difference between DELETE/TRUNCATE/DROP"</div>
+    </div>
+    <div class="card card-blue">
+      <h3>SQL <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <h4>What to study</h4>
+      <ul>
+        <li><strong>SELECT, WHERE, ORDER BY, GROUP BY, HAVING</strong></li>
+        <li><strong>JOINS</strong> — INNER, LEFT, RIGHT, FULL, SELF, CROSS</li>
+        <li><strong>Subqueries</strong> — correlated vs non-correlated</li>
+        <li><strong>Aggregates</strong> — COUNT, SUM, AVG, MAX, MIN</li>
+        <li><strong>Window Functions</strong> — ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD</li>
+        <li>CTEs (WITH clause)</li>
+        <li>CASE WHEN, COALESCE, NULLIF</li>
+        <li>Performance tuning basics (EXPLAIN, indexes)</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">Finance companies (JPMC, BofA, Fidelity) may have an entire SQL-only round. Practice on HackerRank SQL.</div>
+    </div>
+    <div class="card card-green">
+      <h3>Operating Systems <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <h4>What to study</h4>
+      <ul>
+        <li><strong>Process vs Thread</strong> — lifecycle, states, differences</li>
+        <li><strong>CPU Scheduling</strong> — FCFS, SJF, Round Robin, Priority</li>
+        <li><strong>Synchronization</strong> — Mutex, Semaphore, Monitor</li>
+        <li><strong>Deadlock</strong> — conditions, prevention, detection</li>
+        <li><strong>Memory Management</strong> — paging, segmentation, virtual memory</li>
+        <li>Page replacement: LRU, FIFO, Optimal</li>
+        <li>File systems basics</li>
+        <li>Kernel vs user space</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">NVIDIA, Marvell, RTX ask deep OS questions. Amazon asks LRU cache (=page replacement) as a coding problem.</div>
+    </div>
+    <div class="card">
+      <h3>Computer Networks <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <h4>What to study</h4>
+      <ul>
+        <li><strong>OSI Model</strong> — all 7 layers and their functions</li>
+        <li><strong>TCP vs UDP</strong> — when to use which</li>
+        <li><strong>HTTP/HTTPS</strong> — methods, status codes, headers</li>
+        <li><strong>DNS</strong> — how domain resolution works</li>
+        <li>IP addressing, subnetting basics</li>
+        <li>Three-way handshake (TCP)</li>
+        <li>Cookies vs Sessions vs JWT</li>
+        <li>CDN, Load Balancer, Proxy concepts</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">System design uses this heavily. "What happens when you type a URL?" is a classic interview question.</div>
+    </div>
+    <div class="card card-accent">
+      <h3>OOPs <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <h4>What to study</h4>
+      <ul>
+        <li><strong>4 Pillars</strong>: Encapsulation, Abstraction, Inheritance, Polymorphism</li>
+        <li><strong>SOLID principles</strong> — especially Single Responsibility, Open-Closed</li>
+        <li><strong>Design Patterns</strong> — Singleton, Factory, Observer, Strategy, Builder</li>
+        <li>Abstract class vs Interface</li>
+        <li>Method overloading vs overriding</li>
+        <li>Constructor chaining</li>
+        <li>Static vs instance members</li>
+        <li>Access modifiers</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">Design patterns are asked in Microsoft, SAP, IBM, ServiceNow. "Design a parking lot" uses OOPs + patterns.</div>
+    </div>
+    <div class="card card-blue">
+      <h3>System Design <span class="badge badge-high" style="margin-left:8px">High (Tier 1)</span></h3>
+      <h4>What to study (HLD)</h4>
+      <ul>
+        <li>Scalability concepts — horizontal vs vertical scaling</li>
+        <li>Load balancing strategies</li>
+        <li>Caching — Redis, Memcached, cache invalidation</li>
+        <li>Database sharding and replication</li>
+        <li>Message queues — Kafka, RabbitMQ concepts</li>
+        <li>Microservices vs monolith</li>
+        <li>Rate limiting algorithms</li>
+        <li>Design: URL shortener, Twitter, Netflix</li>
+      </ul>
+      <div class="tip-box" style="margin-top:10px;font-size:13px">Required for Amazon, Alphabet, Microsoft, ServiceNow. Not needed for Tier 4 companies. Focus on HLD for placements.</div>
+    </div>
+    <div class="card">
+      <h3>Unix / Linux Basics <span class="badge badge-med" style="margin-left:8px">Med</span></h3>
+      <ul>
+        <li>File operations: ls, cp, mv, rm, mkdir, cat, grep, awk, sed</li>
+        <li>Process management: ps, kill, top, jobs, fg, bg</li>
+        <li>File permissions: chmod, chown, rwx notation</li>
+        <li>Shell scripting basics: variables, loops, conditionals</li>
+        <li>Piping and redirection: |, >, >>, 2>&1</li>
+        <li>SSH, SCP for remote access</li>
+        <li>Crontab for scheduled tasks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Git & GitHub <span class="badge badge-high" style="margin-left:8px">High</span></h3>
+      <ul>
+        <li>git init, clone, add, commit, push, pull</li>
+        <li>git branch, checkout, merge, rebase</li>
+        <li>Conflict resolution</li>
+        <li>git stash, reset, revert</li>
+        <li>Pull requests, code review workflow</li>
+        <li>GitHub Actions basics (CI/CD)</li>
+        <li>.gitignore, README best practices</li>
+      </ul>
+      <div class="tip-box" style="margin-top:8px;font-size:13px">Your GitHub must have active commits. Every recruiter checks it.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>API Basics <span class="badge badge-high" style="margin-left:8px">High</span></h2>
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <h4>REST API Fundamentals</h4>
+        <ul>
+          <li>HTTP Methods: GET, POST, PUT, PATCH, DELETE</li>
+          <li>Status codes: 200, 201, 400, 401, 403, 404, 500</li>
+          <li>Request/Response structure (headers, body, query params)</li>
+          <li>JSON serialization/deserialization</li>
+          <li>Authentication: API keys, OAuth 2.0, JWT</li>
+          <li>CORS and its purpose</li>
+          <li>Idempotency concept</li>
+        </ul>
+      </div>
+      <div>
+        <h4>API Design Principles</h4>
+        <ul>
+          <li>RESTful resource naming conventions</li>
+          <li>Versioning: /v1/, /v2/</li>
+          <li>Pagination strategies</li>
+          <li>Rate limiting and throttling</li>
+          <li>Error response standardization</li>
+          <li>API documentation (OpenAPI/Swagger)</li>
+          <li>GraphQL vs REST basics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #5</div>
+    <div class="ht-title">"I know a bit of everything" means you know nothing well enough to get hired.</div>
+    <p>Companies don't hire generalists who "explored" every technology. They hire people who can <strong>go deep under pressure</strong>. If your OS knowledge is "I know what a process is," that's a reject. If your SQL is limited to SELECT *, that's a reject. If you can't explain ACID without reading notes, that's a reject. <strong>Depth beats breadth.</strong> Master the bold topics in each section above before touching anything else. An interviewer would rather hear "I don't know Segment Trees but I can implement Dijkstra from scratch" than "I've heard of everything but can't code any of it."</p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5: APTITUDE ==================== -->
+<div class="section" id="s5">
+  <h2>Aptitude & Reasoning — Complete Guide</h2>
+  <p class="text-muted mb-lg">Mandatory for Tier 3–4 companies. Speed + accuracy = passing the OA cutoff.</p>
+
+  <div class="highlight-box">
+    <strong class="text-accent">Strategy:</strong> For service companies (Infosys, Accenture, EY), aptitude IS the primary filter. Solve 20 problems daily, timed. Target: 80%+ accuracy at 1 min per question.
+  </div>
+
+  <div class="card-grid mt-md">
+    <div class="card-sm">
+      <h3>Arithmetic & Number Systems <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>Number types, divisibility rules (2,3,4,6,9,11)</li>
+        <li>HCF, LCM using prime factorization</li>
+        <li>Remainders and cyclicity</li>
+        <li>Simplification (BODMAS)</li>
+        <li>Powers and roots</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">Infosys, TCS, Accenture tests</div>
+    </div>
+    <div class="card-sm">
+      <h3>Percentages <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>Percentage increase/decrease formulas</li>
+        <li>Successive percentage changes</li>
+        <li>Profit and loss (markup, discount)</li>
+        <li>Simple and compound interest</li>
+        <li>Data interpretation with %</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">Finance companies, EY, BCG</div>
+    </div>
+    <div class="card-sm">
+      <h3>Ratio & Proportion <span class="badge badge-med" style="margin-left:6px">Med</span></h3>
+      <ul>
+        <li>Direct and inverse proportions</li>
+        <li>Partnership problems</li>
+        <li>Mixture and alligation</li>
+        <li>Ratio of areas/volumes</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Time & Work <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>Work rate = 1/n (n = days to complete)</li>
+        <li>Pipes and cisterns (inlet/outlet)</li>
+        <li>Work efficiency ratios</li>
+        <li>Time and wage problems</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">All service companies</div>
+    </div>
+    <div class="card-sm">
+      <h3>Speed, Distance, Time <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>d = s × t — relative speed (same/opposite direction)</li>
+        <li>Trains (length consideration)</li>
+        <li>Boats and streams (upstream/downstream)</li>
+        <li>Average speed traps</li>
+        <li>Circular track problems</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Probability <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>Sample space, favorable outcomes</li>
+        <li>Conditional probability and Bayes theorem</li>
+        <li>Independent vs dependent events</li>
+        <li>Dice, coins, cards problems</li>
+        <li>Expected value concept</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">JPMC, Morgan Stanley, NVIDIA</div>
+    </div>
+    <div class="card-sm">
+      <h3>Permutations & Combinations <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>nPr and nCr formulas</li>
+        <li>Arrangements with repetition/restriction</li>
+        <li>Distribution problems</li>
+        <li>Circular permutations</li>
+        <li>Combinatorics puzzles</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Logical Reasoning <span class="badge badge-high" style="margin-left:6px">High</span></h3>
+      <ul>
+        <li>Syllogisms (Venn diagram approach)</li>
+        <li>Blood relations</li>
+        <li>Seating arrangements (linear/circular)</li>
+        <li>Coding-decoding patterns</li>
+        <li>Direction sense</li>
+        <li>Data sufficiency</li>
+        <li>Series completion (number/letter)</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h3>Verbal Ability <span class="badge badge-med" style="margin-left:6px">Med–High</span></h3>
+      <ul>
+        <li>Reading comprehension (Top-level passages)</li>
+        <li>Fill in the blanks (grammar + vocabulary)</li>
+        <li>Sentence correction (common errors)</li>
+        <li>Para-jumbles</li>
+        <li>Synonyms / Antonyms</li>
+        <li>One-word substitution</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">Infosys, Accenture, EY, BCG</div>
+    </div>
+    <div class="card-sm">
+      <h3>Puzzles & Estimation <span class="badge badge-med" style="margin-left:6px">Med</span></h3>
+      <ul>
+        <li>Fermi estimation ("How many piano tuners in India?")</li>
+        <li>Classic puzzles: 8-ball problem, bridge+torch, etc.</li>
+        <li>Weighing problems</li>
+        <li>Lateral thinking puzzles</li>
+      </ul>
+      <div class="tag" style="margin-top:8px;display:inline-block">BCG, Amazon, Alphabet</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>What to Prioritize by Company Type</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Company Type</th><th>Most Important Aptitude Areas</th><th>Min Score Needed</th></tr></thead>
+      <tbody>
+        <tr><td>Service (Infosys, Accenture)</td><td>Quant (all) + Logical + Verbal + Basic Coding</td><td>75%+ overall</td></tr>
+        <tr><td>Finance (JPMC, BofA, HSBC)</td><td>Probability + P&C + DI + Percentage + Puzzles</td><td>85%+ quant</td></tr>
+        <tr><td>Consulting (BCG, EY)</td><td>Case reasoning + DI + Verbal + Estimation</td><td>90%+ accuracy</td></tr>
+        <tr><td>Product (Amazon, Microsoft)</td><td>Minimal aptitude — coding skills dominate</td><td>Pass threshold ~60%</td></tr>
+        <tr><td>Semiconductor (Marvell, SanDisk)</td><td>Technical MCQs + basic quant</td><td>70%+ technical MCQ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #6</div>
+    <div class="ht-title">Aptitude rounds are where 60% of candidates get eliminated — before they even see a coding question.</div>
+    <p>You spent months on DSA but can't pass the aptitude cutoff? <strong>Game over before it starts.</strong> Infosys, Accenture, and most Tier 3–4 companies eliminate the majority through aptitude. And no, you can't "wing it" — these are timed tests where 1 minute per question is the norm. If you haven't practiced under time pressure, you'll freeze, second-guess, and run out of time. The students who clear these aren't math geniuses — they're the ones who did 20 problems a day for 3 weeks. <strong>It's a trainable skill, but only if you actually train.</strong></p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6: PROJECTS & RESUME ==================== -->
+<div class="section" id="s6">
+  <h2>Projects & Resume — Interview-Winning Strategy</h2>
+  <div class="card-grid">
+    <div class="card card-accent">
+      <h3>How Many Projects?</h3>
+      <ul>
+        <li><strong>Minimum:</strong> 2 strong projects (quality &gt; quantity)</li>
+        <li><strong>Ideal:</strong> 2–3 projects with 1 flagship</li>
+        <li><strong>Rule:</strong> 1 deep project beats 5 shallow ones</li>
+        <li>At least 1 must be live/deployed with a demo link</li>
+        <li>At least 1 must be AI/ML or full-stack (your profile)</li>
+      </ul>
+    </div>
+    <div class="card card-blue">
+      <h3>What Projects Impress Which Companies</h3>
+      <ul>
+        <li><strong>Amazon/Microsoft:</strong> Scalable backend, microservices, system design project</li>
+        <li><strong>NVIDIA/Marvell:</strong> ML optimization, GPU programming, embedded + CV</li>
+        <li><strong>SAP/ServiceNow:</strong> Enterprise workflow, integration, ERP adjacent</li>
+        <li><strong>JPMC/Fidelity:</strong> Fintech, trading algo, risk analysis tool</li>
+        <li><strong>Infosys/Accenture:</strong> Any clean full-stack app with good documentation</li>
+        <li><strong>Eli Lilly/Stryker:</strong> Health data, ML for diagnostics, IoT + health</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>How to Convert a Normal Project Into Interview-Winning</h2>
+
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div>
+      <h3>Step 1: Add a Real Problem Statement</h3>
+      <p>❌ "I built a todo app." → ✅ "I built a task management system that reduces sprint planning time by eliminating context-switching between 3 tools, used by 50 team members."</p>
+    </div>
+    <div class="tl-item blue"><div class="tl-dot"></div>
+      <h3>Step 2: Add Quantified Metrics</h3>
+      <p>Every project must have numbers: "Reduced API latency from 800ms to 120ms using Redis caching." / "Achieved 94.2% accuracy on a 10,000-sample dataset." / "Handled 500 concurrent requests in load testing."</p>
+    </div>
+    <div class="tl-item green"><div class="tl-dot"></div>
+      <h3>Step 3: Explain Technical Decisions</h3>
+      <p>Be ready to answer: "Why did you choose FastAPI over Flask?" / "Why PostgreSQL over MongoDB?" / "What would you improve if you had more time?" These show engineering maturity.</p>
+    </div>
+    <div class="tl-item red"><div class="tl-dot"></div>
+      <h3>Step 4: Document It Properly</h3>
+      <p>GitHub README must have: problem statement, architecture diagram, setup steps, screenshots/demo link, tech stack, future improvements. Recruiters and interviewers check this.</p>
+    </div>
+    <div class="tl-item purple"><div class="tl-dot"></div>
+      <h3>Step 5: Deploy It</h3>
+      <p>Free options: Vercel (frontend), Render/Railway (backend), HuggingFace Spaces (ML). A live demo beats any description. Put the link in your resume and GitHub profile.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>Resume Best Practices</h2>
+  <div class="card-grid">
+    <div class="card card-green">
+      <h3>Do This</h3>
+      <ul>
+        <li>One page (strictly) for fresher</li>
+        <li>Action verb + metric + outcome format for each bullet</li>
+        <li>Lead with CGPA if &gt; 8.0, else lead with projects</li>
+        <li>Use consistent date format and font</li>
+        <li>Tailor skill section to JD keywords</li>
+        <li>Include: Name, Email, Phone, GitHub, LinkedIn, Portfolio</li>
+        <li>ATS-friendly format (no tables, no columns in main content)</li>
+        <li>List 3–4 bullets per project max</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <h3>Never Do This</h3>
+      <ul>
+        <li>Lie or exaggerate — recruiters ask deep on every line</li>
+        <li>Write skills you can't code with under pressure</li>
+        <li>Use photos or fancy colored headers for ATS submission</li>
+        <li>List vague bullets like "Worked on ML project"</li>
+        <li>Have a stale GitHub (no commits in months)</li>
+        <li>List 30+ skills — pick what you can defend</li>
+        <li>Typos — one typo and you're out for finance companies</li>
+        <li>Generic objective statement at the top</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Resume Bullet Formula</h3>
+      <div class="highlight-box">
+        <code>[Action Verb] + [What you built/did] + [How/Technology] + [Result/Impact]</code>
+      </div>
+      <p style="margin-top:10px;font-size:13px"><strong>Example:</strong> "Engineered an NLP resume screening pipeline using Sentence-BERT and FastAPI, achieving 91% match accuracy and cutting manual screening time by 70% across a 500-resume benchmark."</p>
+      <p style="font-size:13px;color:var(--muted)">Every bullet on your resume should answer: "So what?" and "How much?"</p>
+    </div>
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #7</div>
+    <div class="ht-title">Your "project" isn't a project if it's a tutorial you followed and deployed.</div>
+    <p>Interviewers have seen the same MERN stack todo app, weather dashboard, and e-commerce clone a thousand times. They know the YouTube tutorials by heart. The moment they ask "why did you choose MongoDB over PostgreSQL?" or "how would you add authentication?" and you freeze — <strong>they know you copied it.</strong> A real project means you made design decisions, hit bugs you had to debug yourself, and can explain every line. If you can't answer "what would you improve?" with genuine insight, it's not your project — it's someone else's code on your resume. <strong>That's worse than having no project at all.</strong></p>
+  </div>
+
+  <hr class="divider">
+  <h2>How to Talk About Projects in Interviews</h2>
+  <div class="card">
+    <p>Use the <strong>PAR Framework</strong>: Problem → Approach → Result</p>
+    <div class="grid2" style="margin-top:12px">
+      <div>
+        <h4>1. The Elevator Pitch (30 sec)</h4>
+        <p style="font-size:13px">"I built [project name] which [solves this specific problem] for [this user]. I used [key tech stack]. The main challenge was [X] and I solved it by [Y], resulting in [metric]."</p>
+        <h4 style="margin-top:12px">2. Deep Dive Questions to Prepare</h4>
+        <ul style="font-size:13px">
+          <li>Why did you use this tech stack?</li>
+          <li>What was the biggest challenge?</li>
+          <li>How did you test it?</li>
+          <li>What would you change now?</li>
+          <li>How does it scale to 10x users?</li>
+        </ul>
+      </div>
+      <div>
+        <h4>3. What NOT to Say</h4>
+        <ul style="font-size:13px">
+          <li>"I followed a YouTube tutorial" — rephrase as "I built it based on my learning"</li>
+          <li>"I don't know why it works" — understand every component</li>
+          <li>"It's still in progress" — never mention incomplete projects</li>
+          <li>"My teammate did that part" — know the full codebase</li>
+        </ul>
+        <h4 style="margin-top:12px">4. Quantified Talking Points</h4>
+        <p style="font-size:13px">Pre-prepare 3–4 numbers for each project. Accuracy %, latency, user count, dataset size, throughput, cost saved, time reduced. These stick in interviewers' memory.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 7: COMPANY-SPECIFIC ==================== -->
+<div class="section" id="s7">
+  <h2>Company-Specific Preparation</h2>
+
+  <div class="company-group card-red" style="border-left:4px solid #10b981">
+    <div class="company-logos">
+      <span class="co-tag">Infosys</span><span class="co-tag">Accenture</span><span class="co-tag">EY</span>
+    </div>
+    <h3>Service & Consulting Giants — Communication + Aptitude + Basics</h3>
+    <div class="grid2">
+      <div>
+        <h4>Focus On</h4>
+        <ul>
+          <li>Aptitude (Quantitative, Logical, Verbal) — this is the primary filter</li>
+          <li>Basic coding: loops, sorting, strings, arrays in Python/Java/C</li>
+          <li>Basic OOPs concepts and SQL queries</li>
+          <li>Communication: clear, structured, confident English</li>
+          <li>Current awareness for EY (tech trends, consulting fundamentals)</li>
+          <li>STAR behavioral answers (10+ ready)</li>
+        </ul>
+        <h4 style="margin-top:12px">Interview Style</h4>
+        <p>Infosys: Aptitude OA → Coding (2 easy problems) → HR. Accenture: Aptitude + Technical MCQs → Coding → Communication + HR. EY: Case + technical basics + HR. Very structured. Communication is weighted highly.</p>
+      </div>
+      <div>
+        <h4>Preparation Depth</h4>
+        <ul>
+          <li>50+ aptitude questions/day for 2 weeks before test</li>
+          <li>30–50 LeetCode Easy problems in your primary language</li>
+          <li>SQL: Basic JOIN, subquery, aggregate queries</li>
+          <li>OOPs: 4 pillars + SOLID — be able to explain with real examples</li>
+        </ul>
+        <h4 style="margin-top:12px">Ignore Initially</h4>
+        <ul>
+          <li>System design (not needed)</li>
+          <li>Advanced DP or graphs</li>
+          <li>Bit manipulation, Tries, Segment trees</li>
+        </ul>
+        <div class="tip-box" style="margin-top:10px;font-size:12px">These are realistic targets for almost every  student with 4–6 weeks of focused prep.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company-group" style="border-left:4px solid #ef4444">
+    <div class="company-logos">
+      <span class="co-tag">Amazon</span><span class="co-tag">Microsoft</span><span class="co-tag">Alphabet</span><span class="co-tag">NVIDIA</span><span class="co-tag">ServiceNow</span><span class="co-tag">SAP</span><span class="co-tag">IBM</span><span class="co-tag">Marvell</span><span class="co-tag">SanDisk</span>
+    </div>
+    <h3>Product, Cloud & Semiconductor Leaders — Strong DSA + CS + Problem Solving</h3>
+    <div class="grid2">
+      <div>
+        <h4>Focus On</h4>
+        <ul>
+          <li><strong>DSA:</strong> All topics up to DP and Graphs — LeetCode Medium is minimum</li>
+          <li><strong>CS Fundamentals:</strong> OS, CN, DBMS at depth — not just definitions</li>
+          <li><strong>OOPs + Design Patterns:</strong> Code a parking lot, ATM, library system</li>
+          <li><strong>System Design:</strong> HLD for Amazon, Microsoft, Alphabet (URL shortener, Netflix, Twitter)</li>
+          <li><strong>Amazon:</strong> Master 14 Leadership Principles — every answer must reference one</li>
+          <li><strong>NVIDIA/Marvell/SanDisk:</strong> Computer architecture, memory hierarchy, C/C++, OS depth</li>
+          <li><strong>SAP/ServiceNow:</strong> Enterprise patterns, APIs, cloud basics, integration concepts</li>
+        </ul>
+        <h4 style="margin-top:12px">Interview Style</h4>
+        <p>Amazon: OA (2 hard LeetCode) → 4–6 rounds (coding + LP). Alphabet: Phone screen + 4–5 onsite. Microsoft: OA + HR + 2–3 technical + design. NVIDIA: Heavy OS/CN + coding. Marvell: C/C++ + pointers + system programming. SAP: Enterprise case + coding.</p>
+      </div>
+      <div>
+        <h4>Preparation Depth</h4>
+        <ul>
+          <li>250+ LeetCode (50+ Medium DP, 30+ graphs)</li>
+          <li>Striver SDE Sheet — complete it fully</li>
+          <li>System design: Design 10+ systems (Grokking the System Design)</li>
+          <li>Amazon LP: 15+ prepared STAR stories mapping to LPs</li>
+          <li>NVIDIA: "Operating Systems: Three Easy Pieces" for OS depth</li>
+          <li>Read past OA experiences on LeetCode Discuss and GeeksForGeeks</li>
+        </ul>
+        <h4 style="margin-top:12px">Realistic Timeline</h4>
+        <div class="warn-box" style="font-size:12px">These companies require 4–6 months of serious preparation. Starting in Semester IV is exactly the right time. Don't skip DS/Algo depth. 5-6 months consistent effort can crack NVIDIA/SAP level. Amazon/Google need even more.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company-group card-blue" style="border-left:4px solid #f59e0b">
+    <div class="company-logos">
+      <span class="co-tag">JPMorganChase</span><span class="co-tag">HSBC</span><span class="co-tag">Bank of America</span><span class="co-tag">Morgan Stanley</span><span class="co-tag">Wells Fargo</span><span class="co-tag">Fidelity</span>
+    </div>
+    <h3>Finance & Banking — DSA + SQL + OOPs + Finance Awareness + Accuracy</h3>
+    <div class="grid2">
+      <div>
+        <h4>Focus On</h4>
+        <ul>
+          <li><strong>DSA:</strong> LeetCode Easy–Medium, focus on arrays, strings, trees, DP basics</li>
+          <li><strong>SQL:</strong> This is serious — window functions, CTEs, complex joins, performance</li>
+          <li><strong>OOPs:</strong> Design patterns used in financial systems</li>
+          <li><strong>Finance Basics:</strong> Know what stocks, bonds, derivatives, P&L, risk mean</li>
+          <li><strong>Probability & Statistics:</strong> JPMorgan and Morgan Stanley love quant-style problems</li>
+          <li><strong>Accuracy:</strong> Finance = zero tolerance for bugs. Explain every line</li>
+          <li><strong>Behavioral:</strong> Integrity, attention to detail, teamwork are key themes</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Finance Awareness Minimum</h4>
+        <ul>
+          <li>What is a stock, bond, derivative, mutual fund?</li>
+          <li>What is a trading algorithm?</li>
+          <li>What is risk management?</li>
+          <li>Difference between investment banking and retail banking</li>
+          <li>What does "quantitative analyst" or "financial software engineer" do?</li>
+        </ul>
+        <div class="tip-box" style="margin-top:10px;font-size:12px">Read Investopedia for 30 min/week. You don't need to be a finance expert — just aware enough to sound credible.</div>
+        <h4 style="margin-top:10px">Ignore Initially</h4>
+        <ul>
+          <li>Advanced graph algorithms (rarely asked)</li>
+          <li>System design at Google scale</li>
+          <li>Trie, Segment tree for fresh interviews</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="company-group" style="border-left:4px solid #8b5cf6">
+    <div class="company-logos">
+      <span class="co-tag">BCG</span>
+    </div>
+    <h3>Boston Consulting Group — Problem Solving + Communication + Business Thinking</h3>
+    <div class="grid2">
+      <div>
+        <h4>Focus On</h4>
+        <ul>
+          <li><strong>Case Interviews:</strong> BCG-style market sizing + business cases. Practice 30+ cases.</li>
+          <li><strong>Structured Communication:</strong> Lead with conclusion, support with data (Pyramid Principle)</li>
+          <li><strong>Data Interpretation:</strong> Charts, graphs, business metrics analysis</li>
+          <li><strong>Tech Awareness:</strong> AI/ML in consulting, digital transformation, cloud</li>
+          <li><strong>Presentation Skills:</strong> BCG roles for tech grads include deck creation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li>Case In Point (book)</li>
+          <li>BCG career website — practice cases online</li>
+          <li>Preplounge.com for mock case interviews</li>
+          <li>Victor Cheng's YouTube channel</li>
+        </ul>
+        <div class="warn-box" style="margin-top:10px;font-size:12px">For tech roles at BCG: basic coding is needed but case thinking is paramount. If you're not comfortable with business reasoning, spend 4 weeks on case prep before applying.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company-group card-green" style="border-left:4px solid #06b6d4">
+    <div class="company-logos">
+      <span class="co-tag">Eli Lilly</span><span class="co-tag">Stryker</span><span class="co-tag">Thomson Reuters</span><span class="co-tag">Royal Caribbean</span><span class="co-tag">RTX</span><span class="co-tag">HP</span>
+    </div>
+    <h3>Domain-Specific Roles — Tech + Domain Awareness + Communication</h3>
+    <div class="grid2">
+      <div>
+        <h4>Eli Lilly (Healthcare/Pharma IT)</h4>
+        <ul>
+          <li>Data science, ML for clinical data</li>
+          <li>Python + SQL + statistical basics</li>
+          <li>Healthcare data sensitivity (HIPAA awareness)</li>
+          <li>Your ML/AI projects are highly relevant</li>
+        </ul>
+        <h4 style="margin-top:10px">Stryker (MedTech)</h4>
+        <ul>
+          <li>Embedded/firmware for medical devices (hardware roles)</li>
+          <li>Software: C++, real-time systems</li>
+          <li>For SWE roles: Standard DSA + OOPs</li>
+          <li>Patient safety mindset in all answers</li>
+        </ul>
+        <h4 style="margin-top:10px">RTX (Defense/Aerospace)</h4>
+        <ul>
+          <li>C/C++, embedded, RTOS knowledge</li>
+          <li>Signal processing basics (for relevant roles)</li>
+          <li>Security clearance awareness</li>
+          <li>Strong OS and systems fundamentals</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Thomson Reuters (Legal/Information)</h4>
+        <ul>
+          <li>NLP/ML for text processing (your background fits!)</li>
+          <li>Full-stack web development</li>
+          <li>Data pipelines, ETL concepts</li>
+          <li>Search systems, content management</li>
+        </ul>
+        <h4 style="margin-top:10px">Royal Caribbean (Travel/Hospitality Tech)</h4>
+        <ul>
+          <li>Software engineering — standard DSA + OOPs</li>
+          <li>Cloud platforms (AWS/Azure)</li>
+          <li>Customer experience tech (recommendations, booking systems)</li>
+        </ul>
+        <h4 style="margin-top:10px">HP (Hardware/Software)</h4>
+        <ul>
+          <li>C/C++ for firmware/driver roles</li>
+          <li>Software: standard SWE track (Python/Java)</li>
+          <li>Linux/Unix proficiency</li>
+          <li>IoT and device management basics</li>
+        </ul>
+        <div class="tip-box" style="margin-top:10px;font-size:12px">For all domain companies: research what the company ACTUALLY does in tech. Your questions and enthusiasm about the domain can be a tiebreaker.</div>
+      </div>
+    </div>
+  </div>
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #8</div>
+    <div class="ht-title">The company doesn't need you. You need them. Act accordingly.</div>
+    <p>Every company on this list receives <strong>10,000+ applications for a few hundred roles</strong>. They have the luxury of being picky. Showing up unprepared, not researching the company, or giving generic answers tells the interviewer you don't care enough. "Why do you want to work here?" is not a throwaway question — it's a filter. The students who get offers are the ones who researched the company's tech stack, recent products, and culture. They tailored their STAR stories. They asked smart questions at the end. <strong>Preparation isn't just solving LeetCode — it's showing that you want THIS specific job at THIS specific company.</strong></p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 8: STUDY PLANS ==================== -->
+<div class="section" id="s8">
+  <h2>Daily / Weekly Study Plans</h2>
+
+  <div style="display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap">
+    <button class="nav-btn active" onclick="showPlan('p30')">30-Day Plan</button>
+    <button class="nav-btn" onclick="showPlan('p90')">90-Day Plan</button>
+    <button class="nav-btn" onclick="showPlan('p6m')">6-Month Plan</button>
+  </div>
+
+  <!-- 30 Day -->
+  <div id="p30" class="plan-section">
+    <div class="highlight-box"><strong>30-Day Emergency Sprint</strong> — For immediate placement season. Targets Tier 3–4 companies (Infosys, Accenture, EY, IBM, HP, EY). 4–5 hours/day.</div>
+    <div class="tbl-wrap" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Week</th><th>Daily Topics (Coding)</th><th>Daily Topics (Other)</th><th>Daily Time</th><th>Weekend</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Week 1</strong></td><td>Arrays (2-ptr, prefix sum, sliding window) — 5 problems/day</td><td>Aptitude: % + TSD + T&W (20 Q/day) + SQL SELECT/JOIN basics</td><td>4.5 hrs</td><td>Mock aptitude test (timed)</td></tr>
+          <tr><td><strong>Week 2</strong></td><td>Strings + Hashing + Basic Sorting — 5 problems/day</td><td>Aptitude: Probability + P&C + Logical (20 Q/day) + OOPs concepts</td><td>4.5 hrs</td><td>Full OA simulation (Infosys-style)</td></tr>
+          <tr><td><strong>Week 3</strong></td><td>Linked List + Stack + Queue + Binary Search — 5 problems/day</td><td>CS fundamentals (OS + CN basics) + SQL JOINs + Verbal ability</td><td>5 hrs</td><td>Mock interview with a peer</td></tr>
+          <tr><td><strong>Week 4</strong></td><td>Trees + BST basics + Recursion — 5 problems/day</td><td>STAR behavioral prep (write 10 stories) + Project rehearsal + Resume final</td><td>5 hrs</td><td>Full mock interview (Technical + HR)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-grid mt-md">
+      <div class="card-sm card-green">
+        <h4>Daily Schedule Template</h4>
+        <ul>
+          <li>6:00–7:30 AM — Aptitude (25 problems, timed)</li>
+          <li>4:00–6:00 PM — DSA (2 new problems + 1 revision)</li>
+          <li>6:00–7:00 PM — CS Fundamentals / SQL</li>
+          <li>9:00–10:00 PM — Revision + Next-day planning</li>
+        </ul>
+      </div>
+      <div class="card-sm card-accent">
+        <h4>Revision Strategy</h4>
+        <ul>
+          <li>Every Friday: Redo the week's problems from memory</li>
+          <li>Maintain a mistake log — revisit daily</li>
+          <li>Don't memorize solutions — understand patterns</li>
+          <li>Use Anki or Notion flashcards for CS fundamentals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 90 Day -->
+  <div id="p90" class="plan-section" style="display:none">
+    <div class="highlight-box"><strong>90-Day Solid Foundation</strong> — For Tier 2–3 companies (JPMorgan, IBM, Fidelity, ServiceNow, HSBC). 3–4 hours/day alongside college.</div>
+    <div class="tbl-wrap" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Month</th><th>Primary Focus</th><th>Secondary Focus</th><th>LeetCode Target</th><th>Mock Interviews</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Month 1</strong></td><td>Arrays, Strings, Hashing, Sorting, Searching, Linked List, Stack, Queue</td><td>Aptitude (daily 20Q) + OOPs + SQL basics + Git/GitHub</td><td>80 problems (70% Easy, 30% Med)</td><td>1 mock/week (OA style)</td></tr>
+          <tr><td><strong>Month 2</strong></td><td>Recursion, Binary Search, Trees, BST, Heaps, Greedy, Prefix Sum, Two Pointers</td><td>DBMS + OS fundamentals + Advanced SQL + CN basics</td><td>100 problems (50% Med)</td><td>1 mock/week (Technical)</td></tr>
+          <tr><td><strong>Month 3</strong></td><td>Graphs, DP (1D+2D), Tries, Union Find, Intervals, Topological Sort</td><td>System Design basics + Behavioral prep + Resume final + Company OA practice</td><td>70 problems (60% Med, 20% Hard)</td><td>2 full mocks/week</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-grid mt-md">
+      <div class="card-sm">
+        <h4>Weekday Schedule (3.5 hrs)</h4>
+        <ul>
+          <li>Morning (7–8 AM): Aptitude — 20 questions timed</li>
+          <li>Afternoon (4–6 PM): DSA — 2 problems (1 new, 1 revision)</li>
+          <li>Evening (8–9:30 PM): CS fundamentals / SQL / Project work</li>
+        </ul>
+      </div>
+      <div class="card-sm">
+        <h4>Weekend Schedule (6 hrs)</h4>
+        <ul>
+          <li>Saturday AM: 3 DSA problems (harder level)</li>
+          <li>Saturday PM: Mock OA / CS fundamentals deep dive</li>
+          <li>Sunday AM: Revision (redo 10 past problems)</li>
+          <li>Sunday PM: Project work / Behavioral prep / Mistake log review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 Month -->
+  <div id="p6m" class="plan-section" style="display:none">
+    <div class="highlight-box"><strong>6-Month Complete Roadmap</strong> — For Tier 1–2 companies (Amazon, Microsoft, Alphabet, NVIDIA, JPMC). 2.5–3 hrs on weekdays, 5+ hrs on weekends.</div>
+    <div class="timeline mt-md">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <h3>Month 1: Foundations</h3>
+        <p>Language mastery → Arrays → Strings → Hashing → Basic sorting. 50 LeetCode Easy. Aptitude daily. Setup GitHub with first project commit.</p>
+      </div>
+      <div class="tl-item blue"><div class="tl-dot"></div>
+        <h3>Month 2: Core DS</h3>
+        <p>Linked List → Stack → Queue → Recursion → Binary Search → OOPs depth. 80 LeetCode problems. SQL intermediate. Start Project #1.</p>
+      </div>
+      <div class="tl-item green"><div class="tl-dot"></div>
+        <h3>Month 3: Trees + Heaps + Greedy</h3>
+        <p>All tree patterns → BST → Heaps → Greedy → Intervals. 60 more problems (50% Medium). DBMS + OS at depth. Finish and deploy Project #1.</p>
+      </div>
+      <div class="tl-item red"><div class="tl-dot"></div>
+        <h3>Month 4: Graphs + DP</h3>
+        <p>Full graphs coverage → 1D DP → 2D DP → Knapsack → String DP. 80 problems (60% Medium). Start System Design. Begin Project #2.</p>
+      </div>
+      <div class="tl-item purple"><div class="tl-dot"></div>
+        <h3>Month 5: Advanced + Company Prep</h3>
+        <p>Advanced DP → Tries → Union Find → Bit Manip. System Design (5 designs). Company-specific OA practice. Mock interviews 2/week. Finish Project #2.</p>
+      </div>
+      <div class="tl-item"><div class="tl-dot" style="background:#ec4899"></div>
+        <h3>Month 6: Full Mock + Revision</h3>
+        <p>No new topics. Full mock mode — 3 mocks/week. Revise all patterns. Resume finalized. Behavioral stories polished. Company-specific LP/case prep.</p>
+      </div>
+    </div>
+    <div class="card card-accent mt-md">
+      <h3>6-Month Milestones Checklist</h3>
+      <div class="grid2">
+        <ul>
+          <li>300+ LeetCode problems solved</li>
+          <li>Striver SDE Sheet — 100% complete</li>
+          <li>2 deployed projects with live demos</li>
+          <li>15+ system designs practiced</li>
+          <li>15+ STAR behavioral stories ready</li>
+        </ul>
+        <ul>
+          <li>SQL: HackerRank SQL Gold badge</li>
+          <li>Aptitude: IndiaBix + PrepInsta all medium tests</li>
+          <li>20+ full mock interviews done</li>
+          <li>GitHub: 500+ contributions, clean profile</li>
+          <li>Resume: final, ATS-tested, peer reviewed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="harsh-truth">
+    <div class="ht-label">💀 Harsh Truth #9</div>
+    <div class="ht-title">A study plan you don't follow is just procrastination with extra steps.</div>
+    <p>You've read this entire sheet. You've bookmarked resources. You've made a Notion page. You've told your friends you're "starting seriously from Monday." <strong>None of that counts.</strong> The only thing that counts is problems solved, code written, and mock interviews completed. Every day you "plan" without executing, someone else is solving the problem that will appear in your OA. <strong>Stop organizing. Stop optimizing your workflow. Open LeetCode right now and solve one problem. Then another. Then another. That's the only plan that works.</strong></p>
+  </div>
+</div>
+
+<!-- ==================== SECTION 9: FINAL CHECKLIST ==================== -->
+<div class="section" id="s9">
+  <h2>Final Checklist & Priority Rankings</h2>
+
+  <div class="highlight-box mb-lg">
+    <strong>⚡ Minimum preparation to get shortlisted</strong> (Tier 3–4): Arrays + Strings + Hashing + OOPs + SQL basics + 2 projects + STAR answers + Aptitude daily for 3 weeks.
+    <br><strong>🔥 Extra prep for top-tier roles</strong> (Tier 1): Full DSA + System Design + DP depth + CS fundamentals depth + Company LPs + 5+ mock interviews.
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h2 style="margin-bottom:14px">Must-Do Before Any Interview</h2>
+      <ul class="checklist" id="main-checklist">
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Solved 50+ LeetCode Easy (Arrays, Strings, Hashing)</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Can explain OOPs 4 pillars with real code examples</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>10 basic SQL queries — SELECT, JOIN, GROUP BY, subqueries</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>2 projects ready with live demo + GitHub README</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Resume: 1 page, ATS-friendly, all bullets have metrics</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>10 STAR behavioral stories written and practiced aloud</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Can explain time/space complexity of your code</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Know DBMS basics: ACID, normalization, indexing</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>OS basics: process vs thread, scheduling, deadlock</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>CN basics: OSI model, TCP vs UDP, HTTP, DNS</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Git: can explain merge, rebase, conflict resolution</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>GitHub profile is active with pinned projects</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>LinkedIn profile fully updated with experience + projects</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Aptitude: 80%+ accuracy at 1 min/question</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Done at least 3 full mock interviews (timed)</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-bottom:14px">Extra Before Tier 1 Interviews</h2>
+      <ul class="checklist" id="tier1-checklist">
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>250+ LeetCode (30+ Hard, 80+ Medium DP)</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Striver SDE Sheet — fully completed</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>System Design: 10 systems designed (URL shortener, Netflix, Twitter)</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Amazon: 14 Leadership Principles — story for each</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Can implement any sorting algorithm from scratch</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Design Patterns: can code Singleton, Factory, Observer</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Advanced SQL: window functions, CTEs, query optimization</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>OS: can explain paging, virtual memory, thrashing in depth</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>10+ mock full interviews (coding + system design + behavioral)</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>2 projects with quantified impact + live deployment</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Read "Cracking the Coding Interview" Chapters 1–13</span></li>
+        <li onclick="toggleCheck(this)"><div class="chk"></div><span>Company-specific past OA questions — solved 20+</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <h2>Priority Ranking Table</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Topic</th><th>Why #1</th><th>Who Needs It</th><th>Time to Master</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-high">1</span></td><td>Arrays + Two Pointers + Sliding Window</td><td>Appears in 95% of all OAs. Highest ROI.</td><td>Everyone</td><td>2 weeks</td></tr>
+        <tr><td><span class="badge badge-high">2</span></td><td>Hashing + Strings</td><td>Second most frequent category. Enables fast solutions to brute-force problems.</td><td>Everyone</td><td>2 weeks</td></tr>
+        <tr><td><span class="badge badge-high">3</span></td><td>OOPs Fundamentals</td><td>Universal expectation. Asked in every technical round regardless of role.</td><td>Everyone</td><td>1 week</td></tr>
+        <tr><td><span class="badge badge-high">4</span></td><td>Trees + Binary Search + Recursion</td><td>50%+ of medium-level questions are tree/BS based.</td><td>Product + Finance companies</td><td>3–4 weeks</td></tr>
+        <tr><td><span class="badge badge-high">5</span></td><td>SQL (Basic to Intermediate)</td><td>Finance companies have dedicated SQL rounds. Every backend role needs it.</td><td>Finance + Enterprise + Backend</td><td>2 weeks</td></tr>
+        <tr><td><span class="badge badge-high">6</span></td><td>Dynamic Programming</td><td>Differentiates average from exceptional candidates at Tier 1 companies.</td><td>Amazon, Google, Microsoft, JPMC</td><td>5–6 weeks</td></tr>
+        <tr><td><span class="badge badge-high">7</span></td><td>Graphs (BFS, DFS, Shortest Path, Topo Sort)</td><td>Very high frequency at product companies. Models real-world problems.</td><td>Tier 1 + Tier 2 companies</td><td>3 weeks</td></tr>
+        <tr><td><span class="badge badge-high">8</span></td><td>Aptitude + Reasoning</td><td>Primary filter for service + consulting companies. Non-negotiable.</td><td>Infosys, Accenture, EY, BCG, Finance</td><td>4 weeks daily practice</td></tr>
+        <tr><td><span class="badge badge-med">9</span></td><td>System Design (HLD)</td><td>Needed for Amazon, Google, Microsoft senior-leaning roles.</td><td>Tier 1 companies</td><td>4–6 weeks</td></tr>
+        <tr><td><span class="badge badge-med">10</span></td><td>Heaps + Greedy + Stack</td><td>Medium-high frequency. Enables solving top-K and scheduling problems efficiently.</td><td>Tier 1–2 companies</td><td>2 weeks</td></tr>
+        <tr><td><span class="badge badge-med">11</span></td><td>DBMS + OS + CN Fundamentals</td><td>Asked heavily in Tier 1–2. Many behavioral questions tie to OS/DB concepts.</td><td>All technical roles</td><td>3–4 weeks</td></tr>
+        <tr><td><span class="badge badge-med">12</span></td><td>Projects + Resume</td><td>Gate-pass for getting shortlisted. Defines interview trajectory.</td><td>Everyone — ongoing</td><td>Ongoing</td></tr>
+        <tr><td><span class="badge badge-low">13</span></td><td>Tries + Union Find + Bit Manipulation</td><td>Medium frequency. Needed for Marvell, SanDisk, NVIDIA competitive roles.</td><td>Semiconductor + Competitive-coding focused</td><td>1–2 weeks</td></tr>
+        <tr><td><span class="badge badge-low">14</span></td><td>Segment Tree / Fenwick Tree</td><td>Rare in standard placements. Only for competitive programming track.</td><td>NVIDIA, Marvell advanced roles</td><td>Skip unless targeting these specifically</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+  <h2>Top Resources</h2>
+  <div class="card-grid">
+    <div class="card-sm">
+      <h4>DSA Practice</h4>
+      <ul>
+        <li>LeetCode — primary platform</li>
+        <li>Striver SDE Sheet (takeUforward.com)</li>
+        <li>GeeksForGeeks for concept explanation</li>
+        <li>NeetCode.io — video explanations</li>
+        <li>HackerRank for SQL + Java</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h4>CS Fundamentals</h4>
+      <ul>
+        <li>Gate Smashers (YouTube) — OS + DBMS + CN</li>
+        <li>Apna College / CodeWithHarry for OOPs</li>
+        <li>Grokking System Design Interview</li>
+        <li>"Operating Systems: Three Easy Pieces" (OS depth)</li>
+        <li>Interviewing.io for CS rounds</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h4>Aptitude</h4>
+      <ul>
+        <li>IndiaBix — all topics, company tests</li>
+        <li>PrepInsta — company-specific OA patterns</li>
+        <li>Arun Sharma — Quantitative Aptitude (book)</li>
+        <li>R.S. Aggarwal — Reasoning (book)</li>
+        <li>TCS, Infosys mock tests on PrepInsta</li>
+      </ul>
+    </div>
+    <div class="card-sm">
+      <h4>Resume & HR</h4>
+      <ul>
+        <li>Overleaf — LaTeX resume templates</li>
+        <li>"Cracking the Coding Interview" — Chapter 1 (behavioral)</li>
+        <li>Amazon LP list — official website</li>
+        <li>Pramp.com — free peer mock interviews</li>
+        <li>Glassdoor — company-specific HR questions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="harsh-truth" style="margin-top:28px">
+    <div class="ht-label">💀 Harsh Truth #10 — The Final One</div>
+    <div class="ht-title">The pain of discipline is nothing compared to the pain of watching your classmates get offers while you wait.</div>
+    <p>Placement season is brutal. You will watch people around you celebrate while you refresh your email. You will wonder if you're good enough. That feeling is real, and it's coming for everyone who isn't prepared. <strong>But here's what nobody tells you:</strong> the students who get placed first aren't always the smartest — they're the ones who started preparing when it was still uncomfortable to study instead of hanging out.</p>
+    <ul>
+      <li><strong>6 months from now</strong>, you'll either be relieved or regretful. The choice is made today, not during placement week.</li>
+      <li><strong>Every hour you invest now</strong> pays compound interest. Every hour you waste is gone forever.</li>
+      <li><strong>Your degree gets you to the door.</strong> Only your skills get you through it.</li>
+      <li><strong>Nobody is coming to save you.</strong> Not your college, not your parents, not luck. Just you and your consistency.</li>
+    </ul>
+    <p style="margin-top:10px;color:#fca5a5;font-weight:600;font-family:var(--font-head)">Now close this sheet, open your IDE, and go earn your placement. 🔥</p>
+  </div>
+</div>
+
+</div><!-- end .page -->
+
+<button class="scroll-top" id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const sections=document.querySelectorAll('.section');
+const navBtns=document.querySelectorAll('.topbar .nav-btn');
+function show(i){sections.forEach((s,j)=>{s.classList.toggle('active',i===j)});navBtns.forEach((b,j)=>{b.classList.toggle('active',i===j)});window.scrollTo({top:0,behavior:'smooth'})}
+
+function toggle(head){const item=head.parentElement;item.classList.toggle('open')}
+
+function toggleCheck(li){li.classList.toggle('done-item');const c=li.querySelector('.chk');c.classList.toggle('done');const sp=li.querySelector('span');sp.style.textDecoration=li.classList.contains('done-item')?'line-through':'none';sp.style.color=li.classList.contains('done-item')?'var(--muted)':''}
+
+let pFilter='all';
+function filterAZ(){const q=document.getElementById('az-search').value.toLowerCase();document.querySelectorAll('#az-table tbody tr').forEach(r=>{const txt=r.textContent.toLowerCase();const p=r.dataset.p;const matchQ=txt.includes(q);const matchP=pFilter==='all'||p===pFilter;r.style.display=(matchQ&&matchP)?'':'none'})}
+function filterPriority(p){pFilter=p;document.querySelectorAll('#filter-all,#filter-high,#filter-med,#filter-low').forEach(b=>b.classList.remove('active'));document.getElementById('filter-'+p).classList.add('active');filterAZ()}
+
+function showPlan(id){document.querySelectorAll('.plan-section').forEach(d=>d.style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('#s8 .nav-btn').forEach(b=>{b.classList.toggle('active',b.getAttribute('onclick').includes(id))})}
+
+window.addEventListener('scroll',()=>{document.getElementById('scrollBtn').classList.toggle('visible',window.scrollY>300)});
+</script>
+</body>
+</html>
