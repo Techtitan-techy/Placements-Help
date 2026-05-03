@@ -215,6 +215,68 @@ tr:hover td{background:rgba(255,255,255,.02)}
   z-index: 5;
 }
 .nav-ctrl:hover { color: var(--accent); border-color: var(--accent); background: var(--surface); }
+
+/* MOBILE MENU */
+.mobile-menu-btn {
+  display: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  gap: 8px;
+  align-items: center;
+}
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10,10,15,0.98);
+  z-index: 150;
+  display: none;
+  flex-direction: column;
+  padding: 80px 24px 24px;
+  gap: 12px;
+  overflow-y: auto;
+}
+.mobile-menu-overlay.open { display: flex; }
+.mobile-menu-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 14px;
+  border-radius: 10px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 15px;
+  cursor: pointer;
+}
+.mobile-menu-item.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(245,158,11,0.05);
+}
+.close-menu {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 24px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .nav-container { display: none; }
+  .mobile-menu-btn { display: flex; margin-left: auto; }
+  .brand { font-size: 14px; }
+  .topbar { padding: 0 16px; }
+}
 </style>
 <!-- Vercel Web Analytics -->
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
@@ -241,7 +303,25 @@ tr:hover td{background:rgba(255,255,255,.02)}
       </div>
       <div class="nav-ctrl" onclick="scrollNav(1)">›</div>
     </div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <span>Menu</span>
+      <span style="font-size:12px">▼</span>
+    </button>
   </div>
+</div>
+
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <div class="close-menu" onclick="toggleMobileMenu()">×</div>
+  <div class="mobile-menu-item active" onclick="mobileShow(0)">Overview</div>
+  <div class="mobile-menu-item" onclick="mobileShow(1)">A–Z Concepts</div>
+  <div class="mobile-menu-item" onclick="mobileShow(2)">Roadmap</div>
+  <div class="mobile-menu-item" onclick="mobileShow(3)">DSA Topics</div>
+  <div class="mobile-menu-item" onclick="mobileShow(4)">CS Fundamentals</div>
+  <div class="mobile-menu-item" onclick="mobileShow(5)">Aptitude</div>
+  <div class="mobile-menu-item" onclick="mobileShow(6)">Projects & Resume</div>
+  <div class="mobile-menu-item" onclick="mobileShow(7)">Company-Specific</div>
+  <div class="mobile-menu-item" onclick="mobileShow(8)">Study Plans</div>
+  <div class="mobile-menu-item" onclick="mobileShow(9)">Final Checklist</div>
 </div>
 
 <div class="page">
@@ -1678,6 +1758,19 @@ function scrollNav(dir) {
 }
 
 window.addEventListener('scroll',()=>{document.getElementById('scrollBtn').classList.toggle('visible',window.scrollY>300)});
+
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+function mobileShow(i) {
+  show(i);
+  toggleMobileMenu();
+  const items = document.querySelectorAll('.mobile-menu-item');
+  items.forEach((item, idx) => {
+    item.classList.toggle('active', i === idx);
+  });
+}
 </script>
 </body>
 </html>
