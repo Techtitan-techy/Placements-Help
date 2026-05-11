@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Placement Sheet — LinkedIn Top 25 Companies 2026</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7925393012015843"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7925393012015843"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
@@ -716,108 +719,6 @@
         padding: 12px 16px;
         margin: 12px 0;
       }
-      .harsh-truth {
-        background: linear-gradient(
-          135deg,
-          rgba(220, 38, 38, 0.1),
-          rgba(190, 18, 60, 0.08)
-        );
-        border: 1px solid rgba(220, 38, 38, 0.35);
-        border-left: 4px solid #dc2626;
-        border-radius: 10px;
-        padding: 18px 20px;
-        margin: 24px 0;
-        position: relative;
-        overflow: hidden;
-      }
-      .harsh-truth::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 120px;
-        height: 120px;
-        background: radial-gradient(
-          circle,
-          rgba(220, 38, 38, 0.08),
-          transparent 70%
-        );
-        pointer-events: none;
-      }
-      .harsh-truth .ht-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-family: var(--font-mono);
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #fca5a5;
-        margin-bottom: 10px;
-        background: rgba(220, 38, 38, 0.2);
-        padding: 3px 10px;
-        border-radius: 5px;
-      }
-      .harsh-truth .ht-title {
-        font-family: var(--font-head);
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #fca5a5;
-        margin-bottom: 8px;
-        line-height: 1.3;
-      }
-      .harsh-truth p,
-      .harsh-truth li {
-        color: #e0c4c4;
-        font-size: 13.5px;
-        line-height: 1.65;
-      }
-      .harsh-truth strong {
-        color: #fca5a5;
-      }
-      .harsh-truth ul {
-        padding-left: 16px;
-        margin-top: 6px;
-      }
-      .harsh-truth li {
-        margin-bottom: 4px;
-      }
-      .footer {
-        text-align: center;
-        padding: 60px 24px 40px;
-        border-top: 1px solid var(--border);
-        margin-top: 40px;
-        background: rgba(10, 10, 15, 0.5);
-      }
-      .footer-text {
-        font-family: var(--font-body);
-        font-size: 14px;
-        color: var(--muted);
-      }
-      .footer-credit {
-        font-family: var(--font-head);
-        font-weight: 700;
-        color: var(--accent);
-        margin-bottom: 8px;
-        font-size: 16px;
-      }
-      .footer-heart {
-        color: #ef4444;
-        display: inline-block;
-        animation: heartbeat 1.5s infinite;
-      }
-      @keyframes heartbeat {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
       @media (max-width: 700px) {
         .grid2,
         .grid3 {
@@ -827,313 +728,22 @@
           grid-template-columns: repeat(4, 1fr);
         }
       }
-
-      /* NAV SCROLL CONTROL */
-      .nav-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex: 1;
-        overflow: hidden;
-        position: relative;
-      }
-      .nav-scroll {
-        display: flex;
-        gap: 12px;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        padding: 4px 0;
-      }
-      .nav-scroll::-webkit-scrollbar {
-        display: none;
-      }
-      .nav-ctrl {
-        background: var(--card);
-        border: 1px solid var(--border);
-        color: var(--muted);
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 16px;
-        transition: all 0.2s;
-        user-select: none;
-        z-index: 5;
-      }
-      .nav-ctrl:hover {
-        color: var(--accent);
-        border-color: var(--accent);
-        background: var(--surface);
-      }
-
-      /* MOBILE MENU */
-      .mobile-menu-btn {
-        display: none;
-        background: var(--card);
-        border: 1px solid var(--border);
-        color: var(--text);
-        padding: 8px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: var(--font-body);
-        font-size: 14px;
-        font-weight: 600;
-        gap: 8px;
-        align-items: center;
-      }
-      .mobile-menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 10, 15, 0.98);
-        z-index: 150;
-        display: none;
-        flex-direction: column;
-        padding: 80px 24px 24px;
-        gap: 12px;
-        overflow-y: auto;
-      }
-      .mobile-menu-overlay.open {
-        display: flex;
-      }
-      .mobile-menu-item {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        color: var(--muted);
-        padding: 14px;
-        border-radius: 10px;
-        text-align: left;
-        font-family: var(--font-body);
-        font-size: 15px;
-        cursor: pointer;
-      }
-      .mobile-menu-item.active {
-        border-color: var(--accent);
-        color: var(--accent);
-        background: rgba(245, 158, 11, 0.05);
-      }
-      .close-menu {
-        position: absolute;
-        top: 16px;
-        right: 24px;
-        font-size: 24px;
-        color: var(--muted);
-        cursor: pointer;
-      }
-
-      @media (max-width: 800px) {
-        .nav-container {
-          display: none;
-        }
-        .mobile-menu-btn {
-          display: flex;
-          margin-left: auto;
-        }
-        .brand {
-          font-size: 14px;
-        }
-        .topbar {
-          padding: 0 16px;
-        }
-      }
-      /* CONVERSION OPTIMIZATION CSS */
-      /* Social Proof Ticker */
-      .ticker-wrap {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background: var(--surface);
-        border-left: 4px solid var(--accent);
-        padding: 12px 16px;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        z-index: 1000;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: slideUpFade 0.5s forwards;
-        max-width: 350px;
-        font-size: 13px;
-        border: 1px solid var(--border);
-      }
-      @keyframes slideUpFade {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .ticker-wrap.hide {
-        animation: slideDownFade 0.5s forwards;
-      }
-      @keyframes slideDownFade {
-        to {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-      }
-      .ticker-icon {
-        background: rgba(245, 158, 11, 0.1);
-        color: var(--accent);
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        flex-shrink: 0;
-      }
-      .ticker-time {
-        color: var(--muted);
-        font-size: 11px;
-        margin-bottom: 2px;
-        display: block;
-      }
-
-      /* Tabbed Outcome */
-      .tabs-header {
-        display: flex;
-        gap: 8px;
-        border-bottom: 1px solid var(--border);
-        margin-bottom: 24px;
-        overflow-x: auto;
-        padding-bottom: 8px;
-      }
-      .tab-btn {
-        background: transparent;
-        border: none;
-        color: var(--muted);
-        padding: 8px 16px;
-        font-size: 15px;
-        font-family: var(--font-head);
-        font-weight: 500;
-        cursor: pointer;
-        border-radius: 6px;
-        white-space: nowrap;
-        transition: all 0.2s;
-      }
-      .tab-btn:hover {
-        background: rgba(255, 255, 255, 0.05);
-        color: var(--text);
-      }
-      .tab-btn.active {
-        background: rgba(245, 158, 11, 0.1);
-        color: var(--accent);
-      }
-      .tab-content {
-        display: none;
-        animation: fadeIn 0.3s;
-      }
-      .tab-content.active {
-        display: block;
-      }
-      .outcome-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 16px;
-      }
-      .outcome-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 16px;
-        position: relative;
-        overflow: hidden;
-      }
-      .outcome-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--accent);
-      }
-      .outcome-role {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 4px;
-      }
-      .outcome-company {
-        color: var(--accent);
-        font-size: 14px;
-        margin-bottom: 12px;
-      }
-      .outcome-stats {
-        display: flex;
-        gap: 16px;
-        font-size: 13px;
-        color: var(--muted);
-        border-top: 1px solid var(--border);
-        padding-top: 12px;
-      }
-      .stat-item span {
-        display: block;
-        font-weight: 600;
-        color: var(--text);
-      }
     </style>
-    <!-- Vercel Web Analytics -->
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </head>
   <body>
     <div class="topbar">
       <div class="topbar-inner">
         <div class="brand">PLACEMENT 2026</div>
-        <div class="nav-container">
-          <div class="nav-ctrl" onclick="scrollNav(-1)">‹</div>
-          <div class="nav-scroll" id="navScroll">
-            <button class="nav-btn active" onclick="show(0)">Overview</button>
-            <button class="nav-btn" onclick="show(1)">A–Z Concepts</button>
-            <button class="nav-btn" onclick="show(2)">Roadmap</button>
-            <button class="nav-btn" onclick="show(3)">DSA Topics</button>
-            <button class="nav-btn" onclick="show(4)">CS Fundamentals</button>
-            <button class="nav-btn" onclick="show(5)">Aptitude</button>
-            <button class="nav-btn" onclick="show(6)">Projects & Resume</button>
-            <button class="nav-btn" onclick="show(7)">Company-Specific</button>
-            <button class="nav-btn" onclick="show(8)">Study Plans</button>
-            <button class="nav-btn" onclick="show(9)">Final Checklist</button>
-          </div>
-          <div class="nav-ctrl" onclick="scrollNav(1)">›</div>
-        </div>
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-          <span>Menu</span>
-          <span style="font-size: 12px">▼</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mobile-menu-overlay" id="mobileMenu">
-      <div class="close-menu" onclick="toggleMobileMenu()">×</div>
-      <div class="mobile-menu-item active" onclick="mobileShow(0)">
-        Overview
-      </div>
-      <div class="mobile-menu-item" onclick="mobileShow(1)">A–Z Concepts</div>
-      <div class="mobile-menu-item" onclick="mobileShow(2)">Roadmap</div>
-      <div class="mobile-menu-item" onclick="mobileShow(3)">DSA Topics</div>
-      <div class="mobile-menu-item" onclick="mobileShow(4)">
-        CS Fundamentals
-      </div>
-      <div class="mobile-menu-item" onclick="mobileShow(5)">Aptitude</div>
-      <div class="mobile-menu-item" onclick="mobileShow(6)">
-        Projects & Resume
-      </div>
-      <div class="mobile-menu-item" onclick="mobileShow(7)">
-        Company-Specific
-      </div>
-      <div class="mobile-menu-item" onclick="mobileShow(8)">Study Plans</div>
-      <div class="mobile-menu-item" onclick="mobileShow(9)">
-        Final Checklist
+        <button class="nav-btn active" onclick="show(0)">Overview</button>
+        <button class="nav-btn" onclick="show(1)">A–Z Concepts</button>
+        <button class="nav-btn" onclick="show(2)">Roadmap</button>
+        <button class="nav-btn" onclick="show(3)">DSA Topics</button>
+        <button class="nav-btn" onclick="show(4)">CS Fundamentals</button>
+        <button class="nav-btn" onclick="show(5)">Aptitude</button>
+        <button class="nav-btn" onclick="show(6)">Projects & Resume</button>
+        <button class="nav-btn" onclick="show(7)">Company-Specific</button>
+        <button class="nav-btn" onclick="show(8)">Study Plans</button>
+        <button class="nav-btn" onclick="show(9)">Final Checklist</button>
       </div>
     </div>
 
@@ -1143,113 +753,6 @@
         <div class="hero">
           <div class="badge">LinkedIn Top 25 — India 2026</div>
           <h1>Striver-Style Placement Sheet</h1>
-          <p style="margin-bottom: 24px">
-            Complete zero-to-interview-ready guide for students targeting all 25
-            dream companies. Built for real placement outcomes, not theory
-            overload.
-          </p>
-        <!-- Tabbed Outcome Proof -->
-        <h2 style="margin-top: 40px; margin-bottom: 16px">
-          Recent Placement Outcomes
-        </h2>
-        <div class="tabs-header">
-          <button class="tab-btn active" onclick="switchTab(this, 'tab-t1')">
-            Tier 1 (Product/Cloud)
-          </button>
-          <button class="tab-btn" onclick="switchTab(this, 'tab-t2')">
-            Tier 2 (Finance/Banks)
-          </button>
-          <button class="tab-btn" onclick="switchTab(this, 'tab-t3')">
-            Tier 3 (Service/Consulting)
-          </button>
-          <button class="tab-btn" onclick="switchTab(this, 'tab-t4')">
-            Tier 4 (Core/Domain)
-          </button>
-        </div>
-
-        <div class="tab-content active" id="tab-t1">
-          <div class="outcome-grid">
-            <div class="outcome-card">
-              <div class="outcome-role">Software Development Engineer</div>
-              <div class="outcome-company">Amazon</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>24 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>6 Months</div>
-                <div class="stat-item"><span>Focus</span>DSA + LP</div>
-              </div>
-            </div>
-            <div class="outcome-card">
-              <div class="outcome-role">Cloud Architect</div>
-              <div class="outcome-company">Microsoft</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>22 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>5 Months</div>
-                <div class="stat-item"><span>Focus</span>System Design</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab-t2">
-          <div class="outcome-grid">
-            <div class="outcome-card">
-              <div class="outcome-role">Technology Analyst</div>
-              <div class="outcome-company">JPMorganChase</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>18 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>4 Months</div>
-                <div class="stat-item"><span>Focus</span>DSA + SQL</div>
-              </div>
-            </div>
-            <div class="outcome-card">
-              <div class="outcome-role">Software Engineer</div>
-              <div class="outcome-company">Fidelity</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>15 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>3 Months</div>
-                <div class="stat-item"><span>Focus</span>SQL + OOPs</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab-t3">
-          <div class="outcome-grid">
-            <div class="outcome-card">
-              <div class="outcome-role">Specialist Programmer</div>
-              <div class="outcome-company">Infosys</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>9.5 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>2 Months</div>
-                <div class="stat-item"><span>Focus</span>Aptitude + Basics</div>
-              </div>
-            </div>
-            <div class="outcome-card">
-              <div class="outcome-role">Advanced App Engineering Analyst</div>
-              <div class="outcome-company">Accenture</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>8 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>2 Months</div>
-                <div class="stat-item"><span>Focus</span>Comm. + Projects</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab-t4">
-          <div class="outcome-grid">
-            <div class="outcome-card">
-              <div class="outcome-role">Software Engineer (Firmware)</div>
-              <div class="outcome-company">SanDisk</div>
-              <div class="outcome-stats">
-                <div class="stat-item"><span>Package</span>16 LPA</div>
-                <div class="stat-item"><span>Prep Time</span>4 Months</div>
-                <div class="stat-item"><span>Focus</span>C++ & OS Depth</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="display: none">
           <p>
             Complete zero-to-interview-ready guide for students targeting all 25
             dream companies. Built for real placement outcomes, not theory
@@ -1422,27 +925,6 @@
           <strong class="text-accent">If you have only 1 month:</strong> Focus
           on Arrays, Strings, Hashing, OOPs, SQL, 2 strong projects, and STAR
           behavioral answers. That alone can crack Tier 3–4 companies.
-        </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #1</div>
-          <div class="ht-title">
-            Nobody owes you a placement. The market doesn't care about your
-            potential.
-          </div>
-          <p>
-            There are
-            <strong
-              >1.5 million+ engineering graduates every year in India</strong
-            >. The 25 companies on this list hire a tiny fraction. Your CGPA
-            alone won't save you. Your college name alone won't save you. The
-            only thing that separates the placed from the unplaced is
-            <strong
-              >what you can demonstrate under pressure in 45 minutes</strong
-            >. If you can't solve a LeetCode Medium right now without hints —
-            you're not ready. And "I'll start tomorrow" is the most expensive
-            sentence in placement season.
-          </p>
         </div>
       </div>
 
@@ -1962,22 +1444,6 @@
             </tbody>
           </table>
         </div>
-        <div class="harsh-truth" style="margin-top: 20px">
-          <div class="ht-label">💀 Harsh Truth #2</div>
-          <div class="ht-title">
-            Watching tutorials is NOT studying. Solving problems is.
-          </div>
-          <p>
-            You can watch 200 hours of YouTube DSA content and still fail your
-            first OA.
-            <strong>Passive learning creates an illusion of competence.</strong>
-            If you watched the solution before struggling for at least 30
-            minutes, you didn't learn it — you just consumed entertainment. The
-            students who get placed are the ones who sit with a blank editor,
-            get stuck, feel frustrated, and push through. That discomfort IS the
-            learning. Stop collecting bookmarks and start solving problems.
-          </p>
-        </div>
       </div>
 
       <!-- ==================== SECTION 2: ROADMAP ==================== -->
@@ -2157,26 +1623,6 @@
               revision.
             </p>
           </div>
-        </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #3</div>
-          <div class="ht-title">
-            Your seniors who got placed weren't smarter. They just started
-            earlier.
-          </div>
-          <p>
-            Every year, students panic in August when placements begin. They
-            scramble to learn in 2 weeks what should've taken 4 months.
-            <strong
-              >The timeline above isn't optional — it's the minimum.</strong
-            >
-            If you're reading this in your final year and you haven't solved
-            100+ problems yet, you're already behind. Not "a little behind" —
-            significantly behind. The gap between you and a prepared candidate
-            isn't intelligence, it's the 500+ hours of deliberate practice they
-            put in while you were "planning to start."
-          </p>
         </div>
       </div>
 
@@ -2787,25 +2233,6 @@
             </div>
           </div>
 
-          <div class="harsh-truth">
-            <div class="ht-label">💀 Harsh Truth #4</div>
-            <div class="ht-title">
-              You will not "figure out DSA during the exam." That's not how this
-              works.
-            </div>
-            <p>
-              Every unplaced student says the same thing: "I understand the
-              concepts, I just couldn't solve it in time." That's because
-              <strong>understanding ≠ ability</strong>. You don't "understand"
-              binary search until you can write it bug-free in 3 minutes without
-              Googling. You don't "know" DP until you can identify the state
-              transition in a new problem you've never seen. Interviewers have
-              seen thousands of candidates. They can tell in 5 minutes whether
-              you've actually practiced or just read about it.
-              <strong>There is no shortcut. Solve the problems.</strong>
-            </p>
-          </div>
-
           <div class="acc-item">
             <div class="acc-head" onclick="toggle(this)">
               <span
@@ -3172,26 +2599,6 @@
             </div>
           </div>
         </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #5</div>
-          <div class="ht-title">
-            "I know a bit of everything" means you know nothing well enough to
-            get hired.
-          </div>
-          <p>
-            Companies don't hire generalists who "explored" every technology.
-            They hire people who can <strong>go deep under pressure</strong>. If
-            your OS knowledge is "I know what a process is," that's a reject. If
-            your SQL is limited to SELECT *, that's a reject. If you can't
-            explain ACID without reading notes, that's a reject.
-            <strong>Depth beats breadth.</strong> Master the bold topics in each
-            section above before touching anything else. An interviewer would
-            rather hear "I don't know Segment Trees but I can implement Dijkstra
-            from scratch" than "I've heard of everything but can't code any of
-            it."
-          </p>
-        </div>
       </div>
 
       <!-- ==================== SECTION 5: APTITUDE ==================== -->
@@ -3415,27 +2822,6 @@
             </tbody>
           </table>
         </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #6</div>
-          <div class="ht-title">
-            Aptitude rounds are where 60% of candidates get eliminated — before
-            they even see a coding question.
-          </div>
-          <p>
-            You spent months on DSA but can't pass the aptitude cutoff?
-            <strong>Game over before it starts.</strong> Infosys, Accenture, and
-            most Tier 3–4 companies eliminate the majority through aptitude. And
-            no, you can't "wing it" — these are timed tests where 1 minute per
-            question is the norm. If you haven't practiced under time pressure,
-            you'll freeze, second-guess, and run out of time. The students who
-            clear these aren't math geniuses — they're the ones who did 20
-            problems a day for 3 weeks.
-            <strong
-              >It's a trainable skill, but only if you actually train.</strong
-            >
-          </p>
-        </div>
       </div>
 
       <!-- ==================== SECTION 6: PROJECTS & RESUME ==================== -->
@@ -3590,26 +2976,6 @@
               much?"
             </p>
           </div>
-        </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #7</div>
-          <div class="ht-title">
-            Your "project" isn't a project if it's a tutorial you followed and
-            deployed.
-          </div>
-          <p>
-            Interviewers have seen the same MERN stack todo app, weather
-            dashboard, and e-commerce clone a thousand times. They know the
-            YouTube tutorials by heart. The moment they ask "why did you choose
-            MongoDB over PostgreSQL?" or "how would you add authentication?" and
-            you freeze — <strong>they know you copied it.</strong> A real
-            project means you made design decisions, hit bugs you had to debug
-            yourself, and can explain every line. If you can't answer "what
-            would you improve?" with genuine insight, it's not your project —
-            it's someone else's code on your resume.
-            <strong>That's worse than having no project at all.</strong>
-          </p>
         </div>
 
         <hr class="divider" />
@@ -4012,27 +3378,6 @@
             </div>
           </div>
         </div>
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #8</div>
-          <div class="ht-title">
-            The company doesn't need you. You need them. Act accordingly.
-          </div>
-          <p>
-            Every company on this list receives
-            <strong>10,000+ applications for a few hundred roles</strong>. They
-            have the luxury of being picky. Showing up unprepared, not
-            researching the company, or giving generic answers tells the
-            interviewer you don't care enough. "Why do you want to work here?"
-            is not a throwaway question — it's a filter. The students who get
-            offers are the ones who researched the company's tech stack, recent
-            products, and culture. They tailored their STAR stories. They asked
-            smart questions at the end.
-            <strong
-              >Preparation isn't just solving LeetCode — it's showing that you
-              want THIS specific job at THIS specific company.</strong
-            >
-          </p>
-        </div>
       </div>
 
       <!-- ==================== SECTION 8: STUDY PLANS ==================== -->
@@ -4300,27 +3645,6 @@
               </ul>
             </div>
           </div>
-        </div>
-
-        <div class="harsh-truth">
-          <div class="ht-label">💀 Harsh Truth #9</div>
-          <div class="ht-title">
-            A study plan you don't follow is just procrastination with extra
-            steps.
-          </div>
-          <p>
-            You've read this entire sheet. You've bookmarked resources. You've
-            made a Notion page. You've told your friends you're "starting
-            seriously from Monday." <strong>None of that counts.</strong> The
-            only thing that counts is problems solved, code written, and mock
-            interviews completed. Every day you "plan" without executing,
-            someone else is solving the problem that will appear in your OA.
-            <strong
-              >Stop organizing. Stop optimizing your workflow. Open LeetCode
-              right now and solve one problem. Then another. Then another.
-              That's the only plan that works.</strong
-            >
-          </p>
         </div>
       </div>
 
@@ -4678,65 +4002,9 @@
             </ul>
           </div>
         </div>
-
-        <div class="harsh-truth" style="margin-top: 28px">
-          <div class="ht-label">💀 Harsh Truth #10 — The Final One</div>
-          <div class="ht-title">
-            The pain of discipline is nothing compared to the pain of watching
-            your classmates get offers while you wait.
-          </div>
-          <p>
-            Placement season is brutal. You will watch people around you
-            celebrate while you refresh your email. You will wonder if you're
-            good enough. That feeling is real, and it's coming for everyone who
-            isn't prepared.
-            <strong>But here's what nobody tells you:</strong> the students who
-            get placed first aren't always the smartest — they're the ones who
-            started preparing when it was still uncomfortable to study instead
-            of hanging out.
-          </p>
-          <ul>
-            <li>
-              <strong>6 months from now</strong>, you'll either be relieved or
-              regretful. The choice is made today, not during placement week.
-            </li>
-            <li>
-              <strong>Every hour you invest now</strong> pays compound interest.
-              Every hour you waste is gone forever.
-            </li>
-            <li>
-              <strong>Your degree gets you to the door.</strong> Only your
-              skills get you through it.
-            </li>
-            <li>
-              <strong>Nobody is coming to save you.</strong> Not your college,
-              not your parents, not luck. Just you and your consistency.
-            </li>
-          </ul>
-          <p
-            style="
-              margin-top: 10px;
-              color: #fca5a5;
-              font-weight: 600;
-              font-family: var(--font-head);
-            "
-          >
-            Now close this sheet, open your IDE, and go earn your placement. 🔥
-          </p>
-        </div>
       </div>
     </div>
     <!-- end .page -->
-
-    <footer class="footer">
-      <div class="footer-credit">Created by Karthikesh</div>
-      <div class="footer-text">
-        Because I genuinely care about your future, even when the truth is hard
-        to hear. <br />
-        Build with <span class="footer-heart">♥</span> for every student who is
-        brave enough to try.
-      </div>
-    </footer>
 
     <button
       class="scroll-top"
@@ -4807,71 +4075,11 @@
         });
       }
 
-      function scrollNav(dir) {
-        document
-          .getElementById("navScroll")
-          .scrollBy({ left: dir * 200, behavior: "smooth" });
-      }
-
       window.addEventListener("scroll", () => {
         document
           .getElementById("scrollBtn")
           .classList.toggle("visible", window.scrollY > 300);
       });
-
-      function toggleMobileMenu() {
-        document.getElementById("mobileMenu").classList.toggle("open");
-      }
-
-      function mobileShow(i) {
-        show(i);
-        toggleMobileMenu();
-        const items = document.querySelectorAll(".mobile-menu-item");
-        items.forEach((item, idx) => {
-          item.classList.toggle("active", i === idx);
-        });
-      }
-    </script>
-    <div class="ticker-wrap" id="tickerWrap">
-      <div class="ticker-icon">🚀</div>
-      <div>
-        <span class="ticker-time" id="tickerTime">Just now</span>
-        <strong id="tickerText">Karthik from SRM landed Amazon SDE</strong>
-      </div>
-    </div>
-
-    <script>
-      // Ticker Logic
-      const tickerEvents = [
-        "Karthik from SRM landed Amazon SDE",
-        "Priya cleared Infosys OA",
-        "Rahul scheduled Microsoft onsite",
-        "Sneha matched with JPMC Analyst role",
-        "Arjun secured NVIDIA Hardware Engg",
-      ];
-      let tickerIdx = 0;
-      const tickerWrap = document.getElementById("tickerWrap");
-      const tickerText = document.getElementById("tickerText");
-
-      setInterval(() => {
-        tickerWrap.classList.add("hide");
-        setTimeout(() => {
-          tickerIdx = (tickerIdx + 1) % tickerEvents.length;
-          tickerText.innerText = tickerEvents[tickerIdx];
-          tickerWrap.classList.remove("hide");
-        }, 500); // Wait for fade out
-      }, 6000); // Change every 6 seconds
-
-      // Tabs Logic
-      function switchTab(btn, tabId) {
-        const btns = btn.parentElement.querySelectorAll(".tab-btn");
-        btns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const tabs = document.querySelectorAll(".tab-content");
-        tabs.forEach((t) => t.classList.remove("active"));
-        document.getElementById(tabId).classList.add("active");
-      }
     </script>
   </body>
 </html>

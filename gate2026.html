@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GATE CS 2026 — Complete Study Guide</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7925393012015843"
+     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="notesData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'loose' });</script>
+    <style>
+      :root {
+        --sidebar-w: 280px;
+        --accent: #f59e0b;
+        --accent-light: #fbbf24;
+        --accent-dark: #d97706;
+        --bg: #0a0a0f;
+        --surface: #13131a;
+        --card: #1a1a24;
+        --border: #2a2a3a;
+        --text: #f0f0f5;
+        --text-muted: #8888aa;
+        --font-main: "DM Sans", sans-serif;
+        --font-head: "Syne", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+
+        --formula-bg: rgba(245, 158, 11, 0.05);
+        --formula-border: rgba(245, 158, 11, 0.3);
+        --example-bg: rgba(16, 185, 129, 0.05);
+        --example-border: rgba(16, 185, 129, 0.3);
+        --mistake-bg: rgba(239, 68, 68, 0.05);
+        --mistake-border: rgba(239, 68, 68, 0.3);
+        --pyq-bg: rgba(139, 92, 246, 0.05);
+        --pyq-border: rgba(139, 92, 246, 0.3);
+        --practice-bg: rgba(59, 130, 246, 0.05);
+        --practice-border: rgba(59, 130, 246, 0.3);
+        --interactive-bg: rgba(245, 158, 11, 0.1);
+        --glass: rgba(255, 255, 255, 0.03);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-main);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        display: flex;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* SIDEBAR */
+      #sidebar {
+        width: var(--sidebar-w);
+        min-width: var(--sidebar-w);
+        background: var(--surface);
+        border-right: 1px solid var(--border);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .sidebar-header {
+        padding: 24px;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .brand-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .brand-icon {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        color: white;
+        font-size: 14px;
+      }
+
+      .brand-name {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+
+      #search-box {
+        width: 100%;
+        padding: 10px 14px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: white;
+        font-size: 13px;
+        outline: none;
+        transition: all 0.2s;
+        font-family: var(--font-main);
+      }
+
+      #search-box:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+      }
+
+      .nav-tree {
+        padding: 16px 8px;
+      }
+
+      .sec-head {
+        padding: 12px 16px;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.2s;
+      }
+
+      .sec-head:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+      }
+
+      .sec-head .arrow {
+        font-size: 10px;
+        transition: transform 0.2s;
+      }
+
+      .sec-head.collapsed .arrow {
+        transform: rotate(-90deg);
+      }
+
+      .topic-list {
+        margin-top: 4px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .topic-list.collapsed {
+        max-height: 0 !important;
+      }
+
+      .topic-link {
+        display: block;
+        padding: 8px 16px 8px 32px;
+        font-size: 13px;
+        color: var(--text-muted);
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 2px 0;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      .topic-link:hover {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--accent);
+      }
+
+      .topic-link.active {
+        background: var(--accent);
+        color: #000;
+        font-weight: 700;
+      }
+
+      /* MAIN CONTENT */
+      #main {
+        flex: 1;
+        margin-left: var(--sidebar-w);
+        padding: 40px;
+        max-width: 1200px;
+        margin-right: auto;
+      }
+
+      .page-content {
+        display: none;
+        animation: fadeIn 0.4s ease-out;
+      }
+
+      .page-content.visible {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* DASHBOARD / WELCOME */
+      #welcome {
+        padding-top: 20px;
+      }
+
+      .hero-title {
+        font-family: var(--font-head);
+        font-size: 42px;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--accent), var(--text) 70%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 16px;
+      }
+
+      .hero-sub {
+        font-size: 18px;
+        color: var(--text-muted);
+        margin-bottom: 48px;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+      }
+
+      .section-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        background: var(--surface);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+      }
+
+      .section-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(
+          circle at top right,
+          rgba(245, 158, 11, 0.1),
+          transparent 70%
+        );
+      }
+
+      .card-num {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--accent);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .card-name {
+        font-family: var(--font-head);
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .card-desc {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      /* TOPIC PAGE ELEMENTS */
+      .topic-header {
+        margin-bottom: 40px;
+      }
+
+      .topic-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.2);
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: var(--font-mono);
+      }
+
+      .topic-title {
+        font-family: var(--font-head);
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .topic-desc {
+        font-size: 16px;
+        color: var(--text-muted);
+      }
+
+      /* CARDS */
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+
+      .card h2 {
+        font-family: var(--font-head);
+        font-size: 20px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: white;
+      }
+
+      .card h3 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 20px 0 10px;
+        color: var(--accent-light);
+      }
+
+      .formula-card {
+        background: var(--formula-bg);
+        border-color: var(--formula-border);
+      }
+      .example-card {
+        background: var(--example-bg);
+        border-color: var(--example-border);
+      }
+      .mistake-card {
+        background: var(--mistake-bg);
+        border-color: var(--mistake-border);
+      }
+      .pyq-card {
+        background: var(--pyq-bg);
+        border-color: var(--pyq-border);
+      }
+      .practice-card {
+        background: var(--practice-bg);
+        border-color: var(--practice-border);
+      }
+
+      /* FORMULA/CODE */
+      .formula-block {
+        font-family: var(--font-mono);
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+        font-size: 13px;
+        color: var(--text);
+        white-space: pre-wrap;
+        position: relative;
+      }
+
+      code {
+        font-family: var(--font-mono);
+        background: #1e1e2e;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #a78bfa;
+        font-size: 13px;
+      }
+
+      /* TABLES */
+      .table-wrap {
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        margin: 20px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th {
+        background: var(--surface);
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 11px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: var(--font-mono);
+      }
+
+      td {
+        padding: 12px 16px;
+        border-top: 1px solid var(--border);
+        color: #c0c0d8;
+      }
+
+      tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      /* FOOTER */
+      footer {
+        margin-top: 100px;
+        padding: 60px 0 40px;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      footer p {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .footer-link {
+        font-size: 12px;
+        color: var(--accent);
+        cursor: pointer;
+        font-family: var(--font-mono);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: all 0.2s;
+      }
+
+      .footer-link:hover {
+        color: var(--accent-light);
+        text-decoration: underline;
+      }
+
+      /* HAMBURGER */
+      .menu-trigger {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2000;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        #sidebar {
+          transform: translateX(-100%);
+        }
+        #sidebar.open {
+          transform: translateX(0);
+        }
+        #main {
+          margin-left: 0;
+          padding: 60px 20px 40px;
+        }
+        .menu-trigger {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-title {
+          font-size: 32px;
+        }
+        .section-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="menu-trigger" id="menuBtn">☰</button>
+
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-wrap">
+          <div class="brand-icon">G</div>
+          <div class="brand-name">GATE CS 2026</div>
+        </div>
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Search topics (e.g. Dijkstra, SQL)..."
+        />
+      </div>
+      <nav class="nav-tree" id="nav-tree"></nav>
+    </aside>
+
+    <main id="main">
+      <!-- DASHBOARD / WELCOME -->
+      <div id="welcome-page" class="page-content visible">
+        <div class="hero-header">
+          <h1 class="hero-title">Master GATE CS 2026</h1>
+          <p class="hero-sub">
+            The ultimate interactive roadmap to IIT Guwahati and beyond. 10
+            Sections · 65+ Topics · Practice & PYQs.
+          </p>
+        </div>
+        <div class="section-grid" id="section-cards">
+          <!-- Cards will be injected by JS -->
+        </div>
+      </div>
+
+      <div id="topics-store" class="page-content">
+        <!-- Dynamic content will be injected here -->
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>GATE CS 2026 — Complete Study Guide · Built for Excellence</p>
+        <div class="footer-link" onclick="showDashboard()">Back to Home</div>
+      </footer>
+    </main>
+
+    <script>
+      const SECTIONS = [
+        {
+          id: 1,
+          name: "Engineering Mathematics",
+          icon: "📐",
+          topics: [
+            { id: "prop-logic", name: "Propositional Logic" },
+            { id: "sets-rels", name: "Sets, Relations, Functions" },
+            { id: "linalg", name: "Linear Algebra" },
+            { id: "prob", name: "Probability & Stats" },
+            { id: "graph-theory", name: "Graph Theory" },
+            { id: "combinatorics", name: "Combinatorics" },
+            { id: "calculus", name: "Calculus" },
+          ],
+        },
+        {
+          id: 2,
+          name: "Digital Logic",
+          icon: "🔌",
+          topics: [
+            { id: "bool-min", name: "Boolean Algebra & Min" },
+            { id: "combinational", name: "Combinational Circuits" },
+            { id: "sequential", name: "Sequential Circuits" },
+            { id: "num-rep", name: "Number Representation" },
+          ],
+        },
+        {
+          id: 3,
+          name: "Computer Organization",
+          icon: "💻",
+          topics: [
+            { id: "pipeline", name: "Instruction Pipelining" },
+            { id: "memory", name: "Memory Hierarchy & Cache" },
+            { id: "io-dma", name: "I/O & DMA" },
+            { id: "instr-sets", name: "Addressing Modes" },
+          ],
+        },
+        {
+          id: 4,
+          name: "Programming & DS",
+          icon: "📜",
+          topics: [
+            { id: "c-prog", name: "Programming in C" },
+            { id: "recursion", name: "Recursion" },
+            { id: "trees", name: "Trees & Binary Heaps" },
+            { id: "stacks-queues", name: "Stacks, Queues, LL" },
+          ],
+        },
+        {
+          id: 5,
+          name: "Algorithms",
+          icon: "⚡",
+          topics: [
+            { id: "complexity", name: "Complexity & Master Thm" },
+            { id: "graphs-algo", name: "Graph Algorithms" },
+            { id: "dp-greedy", name: "DP & Greedy" },
+            { id: "hashing", name: "Hashing & Collisions" },
+            { id: "sorting", name: "Searching & Sorting" },
+          ],
+        },
+        {
+          id: 6,
+          name: "Theory of Computation",
+          icon: "🧠",
+          topics: [
+            { id: "fa-re", name: "Regular Lang & FA" },
+            { id: "cfg-pda", name: "CFG & PDA" },
+            { id: "tm-undecid", name: "TM & Undecidability" },
+          ],
+        },
+        {
+          id: 7,
+          name: "Compiler Design",
+          icon: "🏗️",
+          topics: [
+            { id: "lexical", name: "Lexical Analysis" },
+            { id: "parsing", name: "Parsing (LL/LR)" },
+            { id: "sdt-intermediate", name: "SDT & Intermediate Code" },
+          ],
+        },
+        {
+          id: 8,
+          name: "Operating Systems",
+          icon: "💿",
+          topics: [
+            { id: "scheduling", name: "CPU Scheduling" },
+            { id: "sync-deadlock", name: "Sync & Deadlocks" },
+            { id: "paging-vmem", name: "Memory & Paging" },
+            { id: "file-systems", name: "File Systems & Disk" },
+          ],
+        },
+        {
+          id: 9,
+          name: "Databases",
+          icon: "🗄️",
+          topics: [
+            { id: "er-model", name: "ER Model & Relational" },
+            { id: "normalization", name: "Functional Deps & NF" },
+            { id: "sql-algebra", name: "SQL & Relational Algebra" },
+            { id: "transactions", name: "Transactions & Concurrency" },
+          ],
+        },
+        {
+          id: 10,
+          name: "Computer Networks",
+          icon: "🌐",
+          topics: [
+            { id: "osi-tcp", name: "OSI & TCP/IP Stack" },
+            { id: "datalink", name: "Data Link & Error Ctrl" },
+            { id: "ip-routing", name: "IP & Routing" },
+            { id: "transport-app", name: "Transport & App Layer" },
+          ],
+        },
+      ];
+
+      // Initialize Sidebar and Cards
+      function init() {
+        const navTree = document.getElementById("nav-tree");
+        const cardGrid = document.getElementById("section-cards");
+
+        SECTIONS.forEach((sec) => {
+          // Create Section in Sidebar
+          const secDiv = document.createElement("div");
+          secDiv.innerHTML = `
+      <div class="sec-head" onclick="toggleSec(this)">
+        <span>${sec.name}</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="topic-list" data-sec="${sec.id}">
+        ${sec.topics.map((t) => `<div class="topic-link" data-id="${t.id}" onclick="showTopic('${t.id}')">${t.name}</div>`).join("")}
+      </div>
+    `;
+          navTree.appendChild(secDiv);
+
+          // Create Card in Welcome Page
+          const card = document.createElement("div");
+          card.className = "section-card";
+          card.onclick = () => {
+            const firstTopic = sec.topics[0].id;
+            showTopic(firstTopic);
+          };
+          card.innerHTML = `
+      <div class="card-num">Section ${sec.id}</div>
+      <div class="card-name">${sec.icon} ${sec.name}</div>
+      <div class="card-desc">${sec.topics.length} core topics mapped to latest GATE syllabus.</div>
+    `;
+          cardGrid.appendChild(card);
+        });
+      }
+
+      function toggleSec(el) {
+        el.classList.toggle("collapsed");
+        el.nextElementSibling.classList.toggle("collapsed");
+      }
+
+      function showTopic(id) {
+        // Hide welcome
+        document.getElementById("welcome-page").classList.remove("visible");
+        const topicsStore = document.getElementById("topics-store");
+        topicsStore.classList.add("visible");
+        
+        // Find topic metadata
+        let topicInfo = null;
+        let secInfo = null;
+        for(let s of SECTIONS) {
+            let t = s.topics.find(x => x.id === id);
+            if(t) { topicInfo = t; secInfo = s; break; }
+        }
+
+        // Render from NOTES_DATA (if loaded)
+        if (typeof NOTES_DATA !== "undefined" && NOTES_DATA[id]) {
+          renderNote(id, topicInfo, secInfo);
+        } else {
+          topicsStore.innerHTML = `<div class="card"><h2>⚠️ Notes not found</h2><p>Please run the generator script to populate this topic.</p></div>`;
+        }
+
+        window.scrollTo(0, 0);
+
+        // Update sidebar active state
+        document
+          .querySelectorAll(".topic-link")
+          .forEach((l) => l.classList.remove("active"));
+        const activeLink = document.querySelector(
+          `.topic-link[data-id="${id}"]`,
+        );
+        if (activeLink) activeLink.classList.add("active");
+
+        // Close mobile sidebar
+        document.getElementById("sidebar").classList.remove("open");
+      }
+
+      function renderNote(id, topic, section) {
+          const data = NOTES_DATA[id];
+          const store = document.getElementById("topics-store");
+          
+          store.innerHTML = `
+            <div class="topic-header">
+              <div class="topic-badge">Section ${section.id} · ${section.name}</div>
+              <h1 class="topic-title">${topic.name}</h1>
+              <p class="topic-desc">${data.definition}</p>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--accent);">
+              <h2>💡 The Intuition</h2>
+              <p style="font-style: italic; color: var(--text-muted); font-size: 1.1rem;">"${data.intuition}"</p>
+            </div>
+
+            ${data.mermaid ? `
+            <div class="card">
+              <h2>📊 Visualization</h2>
+              <div class="mermaid" id="mermaid-${id}">${data.mermaid}</div>
+            </div>
+            ` : ""}
+
+            ${data.interactive_idea ? `
+            <div class="card" style="background: var(--interactive-bg); border: 2px solid var(--accent);">
+              <h2>🎮 Interactive Mind-Lab</h2>
+              <p>${data.interactive_idea}</p>
+              <div style="margin-top:12px; font-size:12px; color:var(--accent-light);">💡 Experiment with this concept in your local environment or simulator.</div>
+            </div>
+            ` : ""}
+
+            <div class="card">
+              <h2>📚 Key Concepts & Properties</h2>
+              <ul>
+                ${(data.key_points || data.key_concepts || []).map(p => {
+                    const text = typeof p === 'string' ? p : `${p.concept || p.property || 'Point'}: ${p.details || p.value || ''}`;
+                    return `<li>${text}</li>`;
+                }).join("")}
+              </ul>
+            </div>
+
+            ${(data.comparison_table && data.comparison_table.length > 0) ? `
+            <div class="card">
+              <h2>⚖️ Comparison & Categorization</h2>
+              <div style="overflow-x: auto;">
+                <table style="width:100%; border-collapse: collapse; font-size:13px;">
+                  <thead>
+                    <tr style="border-bottom: 2px solid var(--border);">
+                      ${Object.keys(data.comparison_table[0]).map(k => `<th style="text-align:left; padding:12px; color:var(--accent);">${k.toUpperCase()}</th>`).join("")}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${data.comparison_table.map(row => `
+                      <tr style="border-bottom: 1px solid var(--border);">
+                        ${Object.values(row).map(v => `<td style="padding:12px;">${v}</td>`).join("")}
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            ` : ""}
+
+            <div class="card" style="background: rgba(37, 99, 235, 0.05); border: 1px dashed var(--accent);">
+              <h2>🎯 Maximus Problem-Solving Strategy</h2>
+              <p>${Array.isArray(data.strategy) ? data.strategy.join("<br>") : (data.strategy && data.strategy.steps ? data.strategy.steps.join("<br>") : (data.strategy || "Refer to key concepts for problem-solving techniques."))}</p>
+            </div>
+
+            <div class="card">
+              <h2>✍️ Worked Examples</h2>
+              ${(data.examples || []).map(ex => `
+                <div style="margin-bottom: 24px; padding:16px; background:var(--glass); border-radius:12px;">
+                    <h3 style="color:var(--accent-light); margin-bottom:8px;">${ex.title || "Example Case"}</h3>
+                    <p style="margin-bottom:12px;"><strong>Problem:</strong> ${ex.problem || 'N/A'}</p>
+                    <div class="formula-block" style="background:var(--bg);">${ex.sol || ex.solution || 'N/A'}</div>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="card">
+              <h2>📝 Practice Questions (GATE Level)</h2>
+              ${(data.mcqs || []).map((m, i) => `
+                <div style="margin-bottom: 24px; padding:16px; border:1px solid var(--border); border-radius:12px;">
+                    <p><strong>Q${i+1}. ${m.q || m.question}</strong></p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
+                        ${(m.options || []).map((opt, idx) => `
+                            <div class="quiz-opt" onclick="this.style.background='var(--accent)'; this.style.color='black';" style="padding:10px; background:var(--surface); border:1px solid var(--border); border-radius:8px; cursor:pointer; transition:all 0.2s;">
+                                ${String.fromCharCode(65+idx)}) ${opt}
+                            </div>
+                        `).join("")}
+                    </div>
+                    <details style="font-size: 13px; color: var(--accent); cursor: pointer;">
+                        <summary>View Answer & Concept Check</summary>
+                        <div style="padding: 12px; background: var(--surface); border-radius: 8px; margin-top: 8px; color: var(--text); border:1px solid var(--accent-dark);">
+                            <strong>Correct Answer: ${m.ans || m.answer}</strong><br>${m.exp || m.explanation || m.concept_check || ''}
+                        </div>
+                    </details>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="card pyq-card">
+              <h2>🏛️ Previous Year Questions</h2>
+              ${(data.pyqs || []).map(p => `
+                <div style="margin-bottom: 24px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                        <span class="badge" style="background:var(--accent-dark);">${p.year || "GATE"}</span>
+                    </div>
+                    <p>${p.q || p.question}</p>
+                    <div class="formula-block">${p.sol || p.solution || p.step_by_step || 'N/A'}</div>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="card mistake-card">
+              <h2>⚠️ Examiner Traps & Common Mistakes</h2>
+              ${(data.traps || []).map(t => `
+                <div style="margin-bottom: 16px; padding-left:12px; border-left:3px solid #f87171;">
+                    <strong style="color:#f87171;">Trap:</strong> ${t.error || t.trap || 'Common Error'}<br>
+                    <small style="color:var(--text-muted);">How to Avoid: ${t.why || t.explanation || t.avoidance || t.why_it_traps || 'N/A'}</small>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="card practice-card">
+              <h2>🚀 Quick Revision Sheet</h2>
+              <ul>
+                ${(data.revision_cheat_sheet || data.revision || []).map(r => `<li>${r}</li>`).join("")}
+              </ul>
+            </div>
+          `;
+
+          // Trigger Mermaid render after DOM update
+          if (data.mermaid) {
+            setTimeout(() => {
+              mermaid.run({
+                nodes: document.querySelectorAll(".mermaid"),
+              });
+            }, 100);
+          }
+      }
+
+      function showDashboard() {
+        document
+          .querySelectorAll(".page-content")
+          .forEach((p) => p.classList.remove("visible"));
+        document.getElementById("welcome-page").classList.add("visible");
+        document
+          .querySelectorAll(".topic-link")
+          .forEach((l) => l.classList.remove("active"));
+      }
+
+      // Search Logic
+      document.getElementById("search-box").addEventListener("input", (e) => {
+        const q = e.target.value.toLowerCase();
+        document.querySelectorAll(".topic-link").forEach((link) => {
+          const text = link.innerText.toLowerCase();
+          link.style.display = text.includes(q) ? "block" : "none";
+        });
+      });
+
+      // Sidebar toggle for mobile
+      document.getElementById("menuBtn").addEventListener("click", () => {
+        document.getElementById("sidebar").classList.toggle("open");
+      });
+
+      init();
+    </script>
+
+
+    </main>
+  </body>
+</html>
