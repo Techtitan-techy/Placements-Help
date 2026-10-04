@@ -26,5 +26,16 @@ This project is configured for easy deployment to **Vercel**.
 
 ## Project Structure
 - `index.html`: The main placement sheet.
+- `gate2026.html`: The interactive GATE CS 2026 study guide.
+- `robots.txt` and `sitemap.xml`: Search crawler directives and the public page sitemap.
 - `vercel.json`: Vercel configuration for clean URLs.
 - `.gitignore`: Files to exclude from version control.
+
+## Search visibility
+
+The pages include descriptive metadata, canonical URLs, Open Graph tags, a `robots.txt`
+file, and a sitemap. The sitemap currently uses the default deployment URL
+`https://placements-help.vercel.app`; update that host in `index.html`, `gate2026.html`,
+`robots.txt`, and `sitemap.xml` if a custom domain is connected. Submit the sitemap URL
+in Google Search Console after deployment. Search rankings and trending placement
+cannot be guaranteed by code alone.
