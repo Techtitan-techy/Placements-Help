@@ -1,0 +1,30 @@
+# Placement Preparation 2026 — Placements Help
+
+> Practical, zero-to-interview-ready computer science placement curriculum covering Data Structures & Algorithms (DSA), CS fundamentals, system design, and verified company interview debriefs for students targeting top-tier software engineering roles.
+
+## Core Resources
+
+- [Placement Preparation Sheet](https://placements-help.vercel.app/): Main roadmap with Striver-style curated topics, company tiers, study timelines, and interactive checklists.
+- [Microsoft SWE Interview Debrief](https://placements-help.vercel.app/#microsoft-experience): Authentic 4-round interview debrief by Akshat Jain (SWE @ Microsoft) covering Graph shortest paths with constraints, Memory allocation, OS (Deadlocks, Virtual Memory, Semaphores), OOP 4 Pillars, and Tree optimization to O(log N).
+- [GATE CS 2026 Study Guide](https://placements-help.vercel.app/gate2026.html): Comprehensive study notes, subject breakdowns, high-weightage topics, and strategy for GATE Computer Science.
+
+## Curriculum & Key Modules
+
+### 1. Data Structures & Algorithms (DSA)
+- **Arrays & Strings**: Two pointers, sliding window, Kadane's algorithm, prefix sums, binary search.
+- **Linked Lists**: Fast & slow pointers, reversal, cycle detection, LRU cache foundations.
+- **Stacks & Queues**: Monotonic stack, next greater element, queue via stacks.
+- **Binary Trees & BST**: Traversals (inorder, preorder, postorder, level-order), LCA, diameter, path sum, BST validation.
+- **Graphs**: BFS, DFS, Topological Sort (Kahn's), Dijkstra's shortest path, Bellman-Ford, Disjoint Set Union (DSU).
+- **Dynamic Programming (DP)**: 1D DP, 2D Grid DP, Knapsack variations, Longest Common Subsequence (LCS), Longest Increasing Subsequence (LIS), DP on trees.
+
+### 2. Core CS Fundamentals
+- **Operating Systems**: Processes vs Threads, CPU Scheduling, Deadlock Coffman conditions & Banker's algorithm, Virtual Memory (Paging, TLB, Page replacement), Concurrency primitives (Semaphores, Mutexes, Monitors).
+- **DBMS & SQL**: Relational algebra, normalization (1NF to BCNF), indexing (B-trees, hash indices), ACID transactions, isolation levels, complex joins, window functions.
+- **Object-Oriented Programming (OOP)**: Encapsulation, Abstraction, Inheritance, Polymorphism, SOLID principles, design patterns (Singleton, Factory, Observer, Strategy).
+- **Computer Networks**: OSI & TCP/IP stack, TCP 3-way handshake & flow control, UDP, DNS resolution, HTTP/HTTPS, TLS handshake, WebSockets.
+
+### 3. Company Preparation Tracks
+- **Tier 1 (Hardest)**: Amazon, Microsoft, Alphabet, NVIDIA, Marvell. Focus: LeetCode Medium/Hard, deep CS fundamentals, low-level memory, System Design.
+- **Tier 2 (Challenging)**: JPMorgan Chase, Morgan Stanley, BCG, SAP, ServiceNow. Focus: DSA Medium, quantitative reasoning, SQL, enterprise patterns.
+- **Tier 3 & 4**: IBM, Fidelity, Infosys, Accenture, EY, Eli Lilly. Focus: Speed in standard DSA, OOPs, communication, domain awareness.

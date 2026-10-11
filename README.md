@@ -5,30 +5,39 @@ This project is configured for easy deployment to **Vercel**.
 ## How to Deploy
 
 ### Option 1: Using GitHub (Recommended)
-1.  Initialize a Git repository in this folder:
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-2.  Create a new repository on GitHub and push your code there.
-3.  Go to [vercel.com](https://vercel.com) and click **"Add New"** > **"Project"**.
-4.  Import your GitHub repository.
-5.  Click **"Deploy"**.
+
+1. Initialize a Git repository in this folder:
+
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+2. Create a new repository on GitHub and push your code there.
+3. Go to [vercel.com](https://vercel.com) and click **"Add New"** > **"Project"**.
+4. Import your GitHub repository.
+5. Click **"Deploy"**.
 
 ### Option 2: Using Vercel CLI
-1.  Install Vercel CLI: `npm i -g vercel`
-2.  Run the following command in this directory:
-    ```bash
-    vercel
-    ```
-3.  Follow the prompts to deploy.
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run the following command in this directory:
+
+   ```bash
+   vercel
+   ```
+
+3. Follow the prompts to deploy.
 
 ## Project Structure
-- `index.html`: The main placement sheet.
+
+- `index.html`: The main placement sheet (includes A-Z concepts, DSA roadmaps, company guides, and verified interview debriefs).
+- `INTERVIEW_EXPERIENCES.md`: Real-world interview experience breakdowns (e.g., Microsoft SWE).
 - `gate2026.html`: The interactive GATE CS 2026 study guide.
+- `llms.txt`: Structured markdown index for Generative Engine Optimization (GEO) & AI search engines.
 - `robots.txt` and `sitemap.xml`: Search crawler directives and the public page sitemap.
-- `vercel.json`: Vercel configuration for clean URLs.
+- `vercel.json`: Vercel configuration for clean URLs, caching headers, and security policies.
 - `.gitignore`: Files to exclude from version control.
 
 ## Search visibility
